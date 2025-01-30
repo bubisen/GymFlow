@@ -14,15 +14,16 @@ function calculateTotalWeightLifted() {
 function updateDashboard() {
     const totalWorkouts = workouts.length;
     const totalCalories = workouts.reduce((total, workout) => total + (workout.weight * workout.reps * workout.sets * 0.1), 0); // Assuming 0.1 calories per kg lifted
+    const totalSetsLifted = workouts.reduce((total, workout) => total + workout.sets, 0);
     const totalRepsLifted = workouts.reduce((total, workout) => total + (workout.reps * workout.sets), 0); // Summing reps and sets
     const totalWeightLifted = calculateTotalWeightLifted();
 
     // Update the Dashboard
     document.getElementById('totalWorkouts').textContent = totalWorkouts;
     document.getElementById('totalCalories').textContent = totalCalories.toFixed(2);
-    document.getElementById('achievementWorkouts').textContent = `${totalWorkouts} Workouts`;
+    document.getElementById('achievementSetsLifted').textContent = `${totalSetsLifted} Sets`
     document.getElementById('achievementRepsLifted').textContent = `${totalRepsLifted} Reps`;
-    document.getElementById('achievementWeightsLifted').textContent = `${totalWeightLifted.toFixed(2)} kg`;
+    document.getElementById('achievementWeightsLifted').textContent = `${totalWeightLifted.toFixed(2)} kg lifted`;
 
     // Update the Workouts Table
     const workoutsTable = document.getElementById('workoutsTable').getElementsByTagName('tbody')[0];
@@ -127,5 +128,5 @@ document.getElementById('saveMeal').addEventListener('click', () => {
 window.onload = function() {
     loadWorkoutsFromLocalStorage();
     loadNutritionFromLocalStorage();
-    updateDashboard(); // Update dashboard with the loaded workouts and nutrition data
+    updateDashboard();
 };
