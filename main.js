@@ -124,7 +124,17 @@ document.getElementById('saveMeal').addEventListener('click', () => {
     nutritionModal.hide();
 });
 
-// Load data from localStorage when the page is loaded
+document.getElementById('registerButton').addEventListener('click', function() {
+    // Here you can add logic to handle registration, if necessary
+    console.log('User clicked register');
+});
+
+document.getElementById('signInButton').addEventListener('click', function() {
+    // Here you can add logic to handle sign-in, if necessary
+    console.log('User clicked sign in');
+});
+
+// Adatok megjelenítése a Weboldal betöltésekor
 window.onload = function() {
     loadWorkoutsFromLocalStorage();
     loadNutritionFromLocalStorage();

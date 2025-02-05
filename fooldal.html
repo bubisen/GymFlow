@@ -17,10 +17,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#dashboard">Dashboard</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#workouts">Workouts</a></li>
-                    <!--Progress Navbar QuickLink <li class="nav-item"><a class="nav-link" href="#progress">Progress</a></li>--> 
-                    <li class="nav-item"><a class="nav-link" href="#nutrition">Nutrition</a></li>
+                    <li class="nav-item"><a type="button" class="nav-link active" data-bs-toggle="modal" data-bs-target="#registerModal">Regisztráció</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#dashboard">Napló</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#workouts">Statisztika</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nutrition">Edzésterv</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nutrition">Testmérési Adatok</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nutrition">Extrák</a></li>
+                    
                 </ul>
             </div>
         </nav>
@@ -100,6 +103,73 @@
                 </div>
             </div>
         </section>
+
+        <!-- Register Modal-->
+
+        <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="registerModalLabel">Regisztráció</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="registerForm">
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Név</label>
+                                <input type="text" class="form-control" id="username" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Jelszó</label>
+                                <input type="password" class="form-control" id="password" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="confirmPassword" class="form-label">Jelszó megerősítése</label>
+                                <input type="password" class="form-control" id="confirmPassword" required>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#signInModal" data-bs-dismiss="modal">Már van fiókod?</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vissza</button>
+                        <button type="button" class="btn btn-primary" id="registerButton">Registráció</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sign-In Modal -->
+<div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="signInModalLabel">Bejelentkezés</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="signInForm">
+                    <div class="mb-3">
+                        <label for="signInEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="signInEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="signInPassword" class="form-label">Jelszó</label>
+                        <input type="password" class="form-control" id="signInPassword" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vissza</button>
+                <button type="button" class="btn btn-primary" id="signInButton">Bejelentkezés</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
         <!-- Add Workout Modal -->
         <div class="modal fade" id="addWorkoutModal" tabindex="-1" aria-labelledby="addWorkoutModalLabel" aria-hidden="true">
@@ -184,6 +254,7 @@
                 </div>
             </div>
         </div>
+
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <script src="main.js"></script>
