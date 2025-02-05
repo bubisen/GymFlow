@@ -126,11 +126,16 @@ document.getElementById('saveMeal').addEventListener('click', () => {
 
 document.getElementById('registerButton').addEventListener('click', function() {
     // Here you can add logic to handle registration, if necessary
+    // Jelszó >= 8 karakter
+    // email-nek legyen @ stb
+    // 
     console.log('User clicked register');
 });
 
 document.getElementById('signInButton').addEventListener('click', function() {
     // Here you can add logic to handle sign-in, if necessary
+    // megnézi hogy egyezik e az adatbázisban lévő adattal és utána betölti a fiók adatait
+    // hiba kód ha nincs ilyen fiók
     console.log('User clicked sign in');
 });
 

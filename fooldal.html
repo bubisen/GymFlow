@@ -18,11 +18,11 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a type="button" class="nav-link active" data-bs-toggle="modal" data-bs-target="#registerModal">Regisztráció</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#dashboard">Napló</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#workouts">Statisztika</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#nutrition">Edzésterv</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#nutrition">Testmérési Adatok</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#nutrition">Extrák</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Napló</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Statisztika</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Edzésterv</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Testmérési Adatok</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Extrák</a></li>
                     
                 </ul>
             </div>
@@ -30,23 +30,23 @@
 
         <!-- Dashboard Section -->
         <section id="dashboard" class="mb-5">
-            <h2>Dashboard</h2>
+            <h2>Információ</h2>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card p-3">
-                        <h5>Total Workouts</h5>
+                        <h5>Edzések száma</h5>
                         <p id="totalWorkouts" class="display-6">0</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card p-3">
-                        <h5>Total Calories Burned</h5>
+                        <h5>Kalória elégetve</h5>
                         <p id="totalCalories" class="display-6">0</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card p-3">
-                        <h5>Achievements</h5>
+                        <h5>Teljesítmények</h5>
                         <span class="badge bg-success" id="achievementSetsLifted">0 Sets</span>
                         <span class="badge bg-warning" id="achievementRepsLifted">0 Reps</span>
                         <span class="badge bg-primary" id="achievementWeightsLifted">0 kgs lifted</span>
@@ -57,17 +57,17 @@
         
         <!-- Workouts Section -->
         <section id="workouts" class="mb-5">
-            <h2>Workouts</h2>
-            <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addWorkoutModal">Add Workout</button>
+            <h2>Edzések</h2>
+            <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addWorkoutModal">Hozzáadás</button>
             <div class="card">
                 <div class="card-body">
                     <table class="table table-striped" id="workoutsTable">
                         <thead>
                             <tr>
-                                <th>Date</th>
-                                <th>Exercise</th>
-                                <th>Weight (kg)</th>
-                                <th>Reps</th>
+                                <th>Dátum</th>
+                                <th>Gyakorlat</th>
+                                <th>Súly (kg)</th>
+                                <th>Ismétlések</th>
                                 <th>Sets</th>
                             </tr>
                         </thead>
@@ -81,19 +81,19 @@
 
         <!-- Nutrition Section -->
         <section id="nutrition" class="mb-5">
-            <h2>Nutrition</h2>
-            <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addNutritionModal">Add Nutrition</button>
+            <h2>Táplálék</h2>
+            <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addNutritionModal">Hozzáadás</button>
             <div class="card">
                 <div class="card-body">
                     <table class="table table-striped" id="nutritionTable">
                         <thead>
                             <tr>
-                                <th>Date</th>
-                                <th>Meal</th>
-                                <th>Calories</th>
-                                <th>Proteins (g)</th>
-                                <th>Carbs (g)</th>
-                                <th>Fats (g)</th>
+                                <th>Dátum</th>
+                                <th>Étel</th>
+                                <th>Kalóriák</th>
+                                <th>Proteinek (g)</th>
+                                <th>Szénhidrátok (g)</th>
+                                <th>Zsírok (g)</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -136,39 +136,39 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#signInModal" data-bs-dismiss="modal">Már van fiókod?</button>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vissza</button>
-                        <button type="button" class="btn btn-primary" id="registerButton">Registráció</button>
+                        <button type="button" class="btn btn-primary" id="registerButton">Regisztráció</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Sign-In Modal -->
-<div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="signInModalLabel">Bejelentkezés</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form id="signInForm">
-                    <div class="mb-3">
-                        <label for="signInEmail" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="signInEmail" required>
+        <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="signInModalLabel">Bejelentkezés</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="mb-3">
-                        <label for="signInPassword" class="form-label">Jelszó</label>
-                        <input type="password" class="form-control" id="signInPassword" required>
+                    <div class="modal-body">
+                        <form id="signInForm">
+                            <div class="mb-3">
+                                <label for="signInEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="signInEmail" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="signInPassword" class="form-label">Jelszó</label>
+                                <input type="password" class="form-control" id="signInPassword" required>
+                            </div>
+                        </form>
                     </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#registerModal">Vissza</button>
-                <button type="button" class="btn btn-primary" id="signInButton">Bejelentkezés</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#registerModal">Vissza</button>
+                        <button type="button" class="btn btn-primary" id="signInButton">Bejelentkezés</button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
 
 
         <!-- Add Workout Modal -->
@@ -176,25 +176,25 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="addWorkoutModalLabel">Add Workout</h5>
+                        <h5 class="modal-title" id="addWorkoutModalLabel">Edzés hozzáadása</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form id="workoutForm">
                             <div class="mb-3">
-                                <label for="date" class="form-label">Date</label>
+                                <label for="date" class="form-label">Dátum</label>
                                 <input type="date" class="form-control" id="date" required>
                             </div>
                             <div class="mb-3">
-                                <label for="exercise" class="form-label">Exercise</label>
+                                <label for="exercise" class="form-label">Gyakorlat</label>
                                 <input type="text" class="form-control" id="exercise" required>
                             </div>
                             <div class="mb-3">
-                                <label for="weight" class="form-label">Weight (kg)</label>
+                                <label for="weight" class="form-label">Súly (kg)</label>
                                 <input type="number" class="form-control" id="weight" required>
                             </div>
                             <div class="mb-3">
-                                <label for="reps" class="form-label">Reps</label>
+                                <label for="reps" class="form-label">Ismétlés</label>
                                 <input type="number" class="form-control" id="reps" required>
                             </div>
                             <div class="mb-3">
@@ -204,8 +204,8 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" id="saveWorkout">Save Workout</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezár</button>
+                        <button type="button" class="btn btn-primary" id="saveWorkout">Mentés</button>
                     </div>
                 </div>
             </div>
@@ -216,40 +216,40 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="addNutritionModalLabel">Add Nutrition</h5>
+                        <h5 class="modal-title" id="addNutritionModalLabel">Táplálék hozzáadása</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form id="nutritionForm">
                             <div class="mb-3">
-                                <label for="mealDate" class="form-label">Date</label>
+                                <label for="mealDate" class="form-label">Dátum</label>
                                 <input type="date" class="form-control" id="mealDate" required>
                             </div>
                             <div class="mb-3">
-                                <label for="meal" class="form-label">Meal</label>
+                                <label for="meal" class="form-label">Étel</label>
                                 <input type="text" class="form-control" id="meal" required>
                             </div>
                             <div class="mb-3">
-                                <label for="calories" class="form-label">Calories</label>
+                                <label for="calories" class="form-label">Kalóriák</label>
                                 <input type="number" class="form-control" id="calories" required>
                             </div>
                             <div class="mb-3">
-                                <label for="proteins" class="form-label">Proteins (g)</label>
+                                <label for="proteins" class="form-label">Proteinek (g)</label>
                                 <input type="number" class="form-control" id="proteins" required>
                             </div>
                             <div class="mb-3">
-                                <label for="carbs" class="form-label">Carbs (g)</label>
+                                <label for="carbs" class="form-label">Szénhidrátok (g)</label>
                                 <input type="number" class="form-control" id="carbs" required>
                             </div>
                             <div class="mb-3">
-                                <label for="fats" class="form-label">Fats (g)</label>
+                                <label for="fats" class="form-label">Zsírok (g)</label>
                                 <input type="number" class="form-control" id="fats" required>
                             </div>
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" id="saveMeal">Save Meal</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezár</button>
+                        <button type="button" class="btn btn-primary" id="saveMeal">Mental</button>
                     </div>
                 </div>
             </div>
