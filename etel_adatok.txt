@@ -1,65 +1,65 @@
-Csirkemell (sült), Kalória: 165 kcal, Fehérje: 31 g, Zsír: 3.6 g
-Marhahús (sült), Kalória: 250 kcal, Fehérje: 26 g, Zsír: 17 g
-Lazac (sült), Kalória: 206 kcal, Fehérje: 22 g, Zsír: 13 g
-Tojás, Kalória: 155 kcal, Fehérje: 13 g, Zsír: 11 g
-Tej (1.5%), Kalória: 42 kcal, Fehérje: 3.4 g, Zsír: 1.5 g
-Sajt (trappista), Kalória: 380 kcal, Fehérje: 25 g, Zsír: 30 g
-Joghurt (natúr, 3.5%), Kalória: 61 kcal, Fehérje: 3.5 g, Zsír: 3.3 g
-Zabpehely, Kalória: 389 kcal, Fehérje: 17 g, Zsír: 7 g
-Fehér kenyér, Kalória: 265 kcal, Fehérje: 9 g, Zsír: 3.2 g
-Rizs (főtt), Kalória: 130 kcal, Fehérje: 2.7 g, Zsír: 0.3 g
-Burgonya (főtt), Kalória: 86 kcal, Fehérje: 2 g, Zsír: 0.1 g
-Alma, Kalória: 52 kcal, Fehérje: 0.3 g, Zsír: 0.2 g
-Banán, Kalória: 89 kcal, Fehérje: 1.1 g, Zsír: 0.3 g
-Narancs, Kalória: 47 kcal, Fehérje: 0.9 g, Zsír: 0.1 g
-Dió, Kalória: 654 kcal, Fehérje: 15 g, Zsír: 65 g
-Mogyoróvaj, Kalória: 588 kcal, Fehérje: 25 g, Zsír: 50 g
-Csokoládé (ét, 70%), Kalória: 600 kcal, Fehérje: 7.9 g, Zsír: 43 g
-Csirkepaprikás, Kalória: 180 kcal, Fehérje: 18 g, Zsír: 10 g
-Gulyásleves, Kalória: 150 kcal, Fehérje: 10 g, Zsír: 8 g
-Lecsó, Kalória: 120 kcal, Fehérje: 3 g, Zsír: 7 g
-Pizza (sajtos), Kalória: 270 kcal, Fehérje: 11 g, Zsír: 10 g
-Túrós csusza, Kalória: 340 kcal, Fehérje: 12 g, Zsír: 15 g
-Rántott hús, Kalória: 290 kcal, Fehérje: 22 g, Zsír: 18 g
-Pörkölt (sertés), Kalória: 220 kcal, Fehérje: 17 g, Zsír: 15 g
-Főzelék (zöldborsó), Kalória: 100 kcal, Fehérje: 5 g, Zsír: 2 g
-Töltött káposzta, Kalória: 190 kcal, Fehérje: 12 g, Zsír: 9 g
-Rántotta (2 tojás), Kalória: 200 kcal, Fehérje: 14 g, Zsír: 15 g
-Kolbász (sült), Kalória: 350 kcal, Fehérje: 18 g, Zsír: 30 g
-Szendvics (sonkás-sajtos), Kalória: 250 kcal, Fehérje: 15 g, Zsír: 9 g
-Müzli, Kalória: 390 kcal, Fehérje: 8 g, Zsír: 5 g
-Palacsinta (lekváros), Kalória: 210 kcal, Fehérje: 6 g, Zsír: 9 g
-Töltött paprika, Kalória: 220 kcal, Fehérje: 14 g, Zsír: 7 g
-Sült krumpli, Kalória: 312 kcal, Fehérje: 4 g, Zsír: 15 g
-Tészta (főtt), Kalória: 130 kcal, Fehérje: 5 g, Zsír: 1 g
-Lencsefőzelék, Kalória: 150 kcal, Fehérje: 10 g, Zsír: 3 g
-Gesztenyepüré, Kalória: 200 kcal, Fehérje: 3 g, Zsír: 6 g
-Kakaós csiga, Kalória: 410 kcal, Fehérje: 7 g, Zsír: 20 g
-Fánk, Kalória: 450 kcal, Fehérje: 6 g, Zsír: 25 g
-Csirkesaláta, Kalória: 180 kcal, Fehérje: 20 g, Zsír: 8 g
-Tonhal konzerv (olajos), Kalória: 190 kcal, Fehérje: 25 g, Zsír: 8 g
-Brokkoli (főtt), Kalória: 55 kcal, Fehérje: 5 g, Zsír: 0.6 g
-Répa (nyers), Kalória: 41 kcal, Fehérje: 1 g, Zsír: 0.2 g
-Paradicsom, Kalória: 18 kcal, Fehérje: 1 g, Zsír: 0.2 g
-Uborka, Kalória: 15 kcal, Fehérje: 0.6 g, Zsír: 0.2 g
-Káposztasaláta, Kalória: 60 kcal, Fehérje: 2 g, Zsír: 4 g
-Kefir (1.5%), Kalória: 50 kcal, Fehérje: 3.5 g, Zsír: 1.5 g
-Túrós rétes, Kalória: 320 kcal, Fehérje: 10 g, Zsír: 15 g
-Zserbó, Kalória: 470 kcal, Fehérje: 6 g, Zsír: 30 g
-Halas szendvics, Kalória: 300 kcal, Fehérje: 18 g, Zsír: 12 g
-Kebab, Kalória: 400 kcal, Fehérje: 20 g, Zsír: 22 g
-Hamburger, Kalória: 500 kcal, Fehérje: 25 g, Zsír: 30 g
-Gyros (pitában), Kalória: 450 kcal, Fehérje: 22 g, Zsír: 25 g
-Hot-dog, Kalória: 290 kcal, Fehérje: 12 g, Zsír: 18 g
-Lángos (sajtos-tejfölös), Kalória: 410 kcal, Fehérje: 8 g, Zsír: 22 g
-Pogácsa, Kalória: 380 kcal, Fehérje: 7 g, Zsír: 20 g
-Túrógombóc, Kalória: 230 kcal, Fehérje: 12 g, Zsír: 7 g
-Bableves, Kalória: 180 kcal, Fehérje: 10 g, Zsír: 6 g
-Rántott sajt, Kalória: 320 kcal, Fehérje: 15 g, Zsír: 18 g
-Főtt kukorica, Kalória: 96 kcal, Fehérje: 3 g, Zsír: 1.5 g
-Zöldbab főzelék, Kalória: 110 kcal, Fehérje: 6 g, Zsír: 3 g
-Sült hekk, Kalória: 200 kcal, Fehérje: 22 g, Zsír: 10 g
-Rakott krumpli, Kalória: 280 kcal, Fehérje: 12 g, Zsír: 15 g
-Almás pite, Kalória: 260 kcal, Fehérje: 3 g, Zsír: 12 g
-Mézeskalács, Kalória: 380 kcal, Fehérje: 6 g, Zsír: 10 g
-Somlói galuska, Kalória: 320 kcal, Fehérje: 6 g, Zsír: 14 g
+Csirkemell (sült), Kalória: 165 kcal, Fehérje: 31 g, Zsír: 3.6 g, Szénhidrát: 0 g
+Marhahús (sült), Kalória: 250 kcal, Fehérje: 26 g, Zsír: 17 g, Szénhidrát: 0 g
+Lazac (sült), Kalória: 206 kcal, Fehérje: 22 g, Zsír: 13 g, Szénhidrát: 0 g
+Tojás, Kalória: 155 kcal, Fehérje: 13 g, Zsír: 11 g, Szénhidrát: 1.1 g
+Tej (1.5%), Kalória: 42 kcal, Fehérje: 3.4 g, Zsír: 1.5 g, Szénhidrát: 5 g
+Sajt (trappista), Kalória: 380 kcal, Fehérje: 25 g, Zsír: 30 g, Szénhidrát: 1.3 g
+Joghurt (natúr, 3.5%), Kalória: 61 kcal, Fehérje: 3.5 g, Zsír: 3.3 g, Szénhidrát: 4.7 g
+Zabpehely, Kalória: 389 kcal, Fehérje: 17 g, Zsír: 7 g, Szénhidrát: 66 g
+Fehér kenyér, Kalória: 265 kcal, Fehérje: 9 g, Zsír: 3.2 g, Szénhidrát: 49 g
+Rizs (főtt), Kalória: 130 kcal, Fehérje: 2.7 g, Zsír: 0.3 g, Szénhidrát: 28 g
+Burgonya (főtt), Kalória: 86 kcal, Fehérje: 2 g, Zsír: 0.1 g, Szénhidrát: 20 g
+Alma, Kalória: 52 kcal, Fehérje: 0.3 g, Zsír: 0.2 g, Szénhidrát: 14 g
+Banán, Kalória: 89 kcal, Fehérje: 1.1 g, Zsír: 0.3 g, Szénhidrát: 23 g
+Narancs, Kalória: 47 kcal, Fehérje: 0.9 g, Zsír: 0.1 g, Szénhidrát: 12 g
+Dió, Kalória: 654 kcal, Fehérje: 15 g, Zsír: 65 g, Szénhidrát: 14 g
+Mogyoróvaj, Kalória: 588 kcal, Fehérje: 25 g, Zsír: 50 g, Szénhidrát: 20 g
+Csokoládé (ét, 70%), Kalória: 600 kcal, Fehérje: 7.9 g, Zsír: 43 g, Szénhidrát: 45 g
+Csirkepaprikás, Kalória: 180 kcal, Fehérje: 18 g, Zsír: 10 g, Szénhidrát: 5 g
+Gulyásleves, Kalória: 150 kcal, Fehérje: 10 g, Zsír: 8 g, Szénhidrát: 12 g
+Lecsó, Kalória: 120 kcal, Fehérje: 3 g, Zsír: 7 g, Szénhidrát: 10 g
+Pizza (sajtos), Kalória: 270 kcal, Fehérje: 11 g, Zsír: 10 g, Szénhidrát: 33 g
+Túrós csusza, Kalória: 340 kcal, Fehérje: 12 g, Zsír: 15 g, Szénhidrát: 38 g
+Rántott hús, Kalória: 290 kcal, Fehérje: 22 g, Zsír: 18 g, Szénhidrát: 10 g
+Pörkölt (sertés), Kalória: 220 kcal, Fehérje: 17 g, Zsír: 15 g, Szénhidrát: 5 g
+Főzelék (zöldborsó), Kalória: 100 kcal, Fehérje: 5 g, Zsír: 2 g, Szénhidrát: 15 g
+Töltött káposzta, Kalória: 190 kcal, Fehérje: 12 g, Zsír: 9 g, Szénhidrát: 14 g
+Rántotta (2 tojás), Kalória: 200 kcal, Fehérje: 14 g, Zsír: 15 g, Szénhidrát: 1 g
+Kolbász (sült), Kalória: 350 kcal, Fehérje: 18 g, Zsír: 30 g, Szénhidrát: 2 g
+Szendvics (sonkás-sajtos), Kalória: 250 kcal, Fehérje: 15 g, Zsír: 9 g, Szénhidrát: 30 g
+Müzli, Kalória: 390 kcal, Fehérje: 8 g, Zsír: 5 g, Szénhidrát: 75 g
+Palacsinta (lekváros), Kalória: 210 kcal, Fehérje: 6 g, Zsír: 9 g, Szénhidrát: 30 g
+Töltött paprika, Kalória: 220 kcal, Fehérje: 14 g, Zsír: 7 g, Szénhidrát: 18 g
+Sült krumpli, Kalória: 312 kcal, Fehérje: 4 g, Zsír: 15 g, Szénhidrát: 41 g
+Tészta (főtt), Kalória: 130 kcal, Fehérje: 5 g, Zsír: 1 g, Szénhidrát: 25 g
+Lencsefőzelék, Kalória: 150 kcal, Fehérje: 10 g, Zsír: 3 g, Szénhidrát: 20 g
+Gesztenyepüré, Kalória: 200 kcal, Fehérje: 3 g, Zsír: 6 g, Szénhidrát: 35 g
+Kakaós csiga, Kalória: 410 kcal, Fehérje: 7 g, Zsír: 20 g, Szénhidrát: 50 g
+Fánk, Kalória: 450 kcal, Fehérje: 6 g, Zsír: 25 g, Szénhidrát: 55 g
+Csirkesaláta, Kalória: 180 kcal, Fehérje: 20 g, Zsír: 8 g, Szénhidrát: 5 g
+Tonhal konzerv (olajos), Kalória: 190 kcal, Fehérje: 25 g, Zsír: 8 g, Szénhidrát: 0 g
+Brokkoli (főtt), Kalória: 55 kcal, Fehérje: 5 g, Zsír: 0.6 g, Szénhidrát: 11 g
+Répa (nyers), Kalória: 41 kcal, Fehérje: 1 g, Zsír: 0.2 g, Szénhidrát: 10 g
+Paradicsom, Kalória: 18 kcal, Fehérje: 1 g, Zsír: 0.2 g, Szénhidrát: 4 g
+Uborka, Kalória: 15 kcal, Fehérje: 0.6 g, Zsír: 0.2 g, Szénhidrát: 3 g
+Káposztasaláta, Kalória: 60 kcal, Fehérje: 2 g, Zsír: 4 g, Szénhidrát: 8 g
+Kefir (1.5%), Kalória: 50 kcal, Fehérje: 3.5 g, Zsír: 1.5 g, Szénhidrát: 5 g
+Túrós rétes, Kalória: 320 kcal, Fehérje: 10 g, Zsír: 15 g, Szénhidrát: 40 g
+Zserbó, Kalória: 470 kcal, Fehérje: 6 g, Zsír: 30 g, Szénhidrát: 50 g
+Halas szendvics, Kalória: 300 kcal, Fehérje: 18 g, Zsír: 12 g, Szénhidrát: 35 g
+Kebab, Kalória: 400 kcal, Fehérje: 20 g, Zsír: 22 g, Szénhidrát: 45 g
+Hamburger, Kalória: 500 kcal, Fehérje: 25 g, Zsír: 30 g, Szénhidrát: 50 g
+Gyros (pitában), Kalória: 450 kcal, Fehérje: 22 g, Zsír: 25 g, Szénhidrát: 48 g
+Hot-dog, Kalória: 290 kcal, Fehérje: 12 g, Zsír: 18 g, Szénhidrát: 30 g
+Lángos (sajtos-tejfölös), Kalória: 410 kcal, Fehérje: 8 g, Zsír: 22 g, Szénhidrát: 45 g
+Pogácsa, Kalória: 380 kcal, Fehérje: 7 g, Zsír: 20 g, Szénhidrát: 42 g
+Túrógombóc, Kalória: 230 kcal, Fehérje: 12 g, Zsír: 7 g, Szénhidrát: 30 g
+Bableves, Kalória: 180 kcal, Fehérje: 10 g, Zsír: 6 g, Szénhidrát: 22 g
+Rántott sajt, Kalória: 320 kcal, Fehérje: 15 g, Zsír: 18 g, Szénhidrát: 10 g
+Főtt kukorica, Kalória: 96 kcal, Fehérje: 3 g, Zsír: 1.5 g, Szénhidrát: 21 g
+Zöldbab főzelék, Kalória: 110 kcal, Fehérje: 6 g, Zsír: 3 g, Szénhidrát: 15 g
+Sült hekk, Kalória: 200 kcal, Fehérje: 22 g, Zsír: 10 g, Szénhidrát: 0 g
+Rakott krumpli, Kalória: 280 kcal, Fehérje: 12 g, Zsír: 15 g, Szénhidrát: 30 g
+Almás pite, Kalória: 260 kcal, Fehérje: 3 g, Zsír: 12 g, Szénhidrát: 35 g
+Mézeskalács, Kalória: 380 kcal, Fehérje: 6 g, Zsír: 10 g, Szénhidrát: 65 g
+Somlói galuska, Kalória: 320 kcal, Fehérje: 6 g, Zsír: 14 g, Szénhidrát: 40 g
