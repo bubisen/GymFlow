@@ -21,9 +21,9 @@ function updateDashboard() {
     // Update the Dashboard
     document.getElementById('totalWorkouts').textContent = totalWorkouts;
     document.getElementById('totalCalories').textContent = totalCalories.toFixed(2);
-    document.getElementById('achievementSetsLifted').textContent = `${totalSetsLifted} Sets`
-    document.getElementById('achievementRepsLifted').textContent = `${totalRepsLifted} Reps`;
-    document.getElementById('achievementWeightsLifted').textContent = `${totalWeightLifted.toFixed(2)} kg lifted`;
+    document.getElementById('achievementSetsLifted').textContent = `${totalSetsLifted}`
+    document.getElementById('achievementRepsLifted').textContent = `${totalRepsLifted}`;
+    document.getElementById('achievementWeightsLifted').textContent = `${totalWeightLifted.toFixed(2)} kg`;
 
     // Update the Workouts Table
     const workoutsTable = document.getElementById('workoutsTable').getElementsByTagName('tbody')[0];
@@ -87,14 +87,20 @@ document.getElementById('saveWorkout').addEventListener('click', () => {
 
     workouts.push({ date, exercise, weight, reps, sets });
     saveWorkoutsToLocalStorage(); // Save to localStorage
-    updateDashboard(); // Update dashboard
+    updateDashboard(); // Update the dashboard with new data
+
+    document.getElementById('date').value = '';
+    document.getElementById('exercise').value = '';
+    document.getElementById('weight').value = '';
+    document.getElementById('reps').value = '';
+    document.getElementById('sets').value = '';
 
     // Close Modal
-    const modal = bootstrap.Modal.getInstance(document.getElementById('addWorkoutModal'));
-    modal.hide();
+    const workoutModal = bootstrap.Modal.getInstance(document.getElementById('addWorkoutModal'));
+    workoutModal.hide();
 });
 
-// Add Nutrition Handler (for completeness)
+// Add Nutrition Handler
 document.getElementById('saveMeal').addEventListener('click', () => {
     const mealDate = document.getElementById('mealDate').value;
     const meal = document.getElementById('meal').value;
@@ -106,7 +112,6 @@ document.getElementById('saveMeal').addEventListener('click', () => {
     nutrition.push({ mealDate, meal, calories, proteins, carbs, fats });
     saveNutritionToLocalStorage(); // Save to localStorage
 
-    // Update Nutrition Table (not shown here but same structure as workouts)
     const nutritionTable = document.getElementById('nutritionTable').getElementsByTagName('tbody')[0];
     nutritionTable.innerHTML = ''; // Clear current rows
     nutrition.forEach(item => {
@@ -119,6 +124,13 @@ document.getElementById('saveMeal').addEventListener('click', () => {
         row.insertCell(5).textContent = item.fats;
     });
 
+    document.getElementById('mealDate').value = '';
+    document.getElementById('meal').value = '';
+    document.getElementById('calories').value = '';
+    document.getElementById('proteins').value = '';
+    document.getElementById('carbs').value = '';
+    document.getElementById('fats').value = '';
+
     // Close Modal
     const nutritionModal = bootstrap.Modal.getInstance(document.getElementById('addNutritionModal'));
     nutritionModal.hide();
@@ -128,15 +140,12 @@ document.getElementById('registerButton').addEventListener('click', function() {
     // Here you can add logic to handle registration, if necessary
     // Jelszó >= 8 karakter
     // email-nek legyen @ stb
-    // 
-    console.log('User clicked register');
 });
 
 document.getElementById('signInButton').addEventListener('click', function() {
     // Here you can add logic to handle sign-in, if necessary
     // megnézi hogy egyezik e az adatbázisban lévő adattal és utána betölti a fiók adatait
     // hiba kód ha nincs ilyen fiók
-    console.log('User clicked sign in');
 });
 
 // Adatok megjelenítése a Weboldal betöltésekor
