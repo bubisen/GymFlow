@@ -154,3 +154,108 @@ window.onload = function() {
     loadNutritionFromLocalStorage();
     updateDashboard();
 };
+
+function updateContent(category) {
+    const content = document.getElementById('content');
+    let html = '';
+
+    switch (category) {
+        case 'Táplálkozás':
+            html = `
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Táplálkozás elem 1</h5>
+                        <p class="card-text">Ez egy táplálkozás elem leírása.</p>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Táplálkozás elem 2</h5>
+                        <p class="card-text">Ez egy másik táplálkozás elem leírása.</p>
+                    </div>
+                </div>`;
+            break;
+        case 'Ranglista':
+            html = `
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Ranglista elem 1</h5>
+                        <p class="card-text">Ez egy ranglista elem leírása.</p>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Ranglista elem 2</h5>
+                        <p class="card-text">Ez egy másik ranglista elem leírása.</p>
+                    </div>
+                </div>`;
+            break;
+        case 'Videók':
+            html = `
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Videók elem 1</h5>
+                        <p class="card-text">Ez egy videók elem leírása.</p>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Videók elem 2</h5>
+                        <p class="card-text">Ez egy másik videók elem leírása.</p>
+                    </div>
+                </div>`;
+            break;
+        case 'Alvás':
+            html = `
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Alvás elem 1</h5>
+                        <p class="card-text">Ez egy alvás elem leírása.</p>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Alvás elem 2</h5>
+                        <p class="card-text">Ez egy másik alvás elem leírása.</p>
+                    </div>
+                </div>`;
+            break;
+        case 'Rekordok':
+            html = `
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Rekordok elem 1</h5>
+                        <p class="card-text">Ez egy rekordok elem leírása.</p>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Rekordok elem 2</h5>
+                        <p class="card-text">Ez egy másik rekordok elem leírása.</p>
+                    </div>
+                </div>`;
+            break;
+        default:
+            html = `
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Példa elem 1</h5>
+                        <p class="card-text">Ez egy példa elem leírása.</p>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Példa elem 2</h5>
+                        <p class="card-text">Ez egy másik példa elem leírása.</p>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Példa elem 3</h5>
+                        <p class="card-text">Ez egy harmadik példa elem leírása.</p>
+                    </div>
+                </div>`;
+    }
+
+    content.innerHTML = html;
+}
