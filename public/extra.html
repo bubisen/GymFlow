@@ -20,15 +20,77 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#registerModal">Regisztráció</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">Napló</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="naplo.html">Napló</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Statisztika</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Tervek</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Testmérési Adatok</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Extra</a></li>
+                    <li class="nav-item"><a class="nav-link" href="extra.html">Extra</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Regisztráció</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Név</label>
+                            <input type="text" class="form-control" id="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Jelszó</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Jelszó megerősítése</label>
+                            <input type="password" class="form-control" id="confirmPassword" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#signInModal" data-bs-dismiss="modal">Már van fiókod?</button>
+                    <button type="button" class="btn btn-primary" id="registerButton">Regisztráció</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signInModalLabel">Bejelentkezés</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signInForm">
+                        <div class="mb-3">
+                            <label for="signInEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="signInEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signInPassword" class="form-label">Jelszó</label>
+                            <input type="password" class="form-control" id="signInPassword" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#registerModal">Vissza</button>
+                    <button type="button" class="btn btn-primary" id="signInButton">Bejelentkezés</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="container mt-5">
         <div class="row">
@@ -46,19 +108,19 @@
                 <h2>Példa elemek</h2>
                 <div id="content">
                     <div class="card mb-3">
-                        <div class="card-body"></div>
+                        <div class="card-body">
                             <h5 class="card-title">Példa elem 1</h5>
                             <p class="card-text">Ez egy példa elem leírása.</p>
                         </div>
                     </div>
-                    <div class="card mb-3"></div>
-                        <div class="card-body"></div>
+                    <div class="card mb-3">
+                        <div class="card-body">
                             <h5 class="card-title">Példa elem 2</h5>
                             <p class="card-text">Ez egy másik példa elem leírása.</p>
                         </div>
                     </div>
-                    <div class="card mb-3"></div>
-                        <div class="card-body"></div>
+                    <div class="card mb-3">
+                        <div class="card-body">
                             <h5 class="card-title">Példa elem 3</h5>
                             <p class="card-text">Ez egy harmadik példa elem leírása.</p>
                         </div>

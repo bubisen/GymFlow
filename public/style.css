@@ -21,6 +21,18 @@ body {
     color: #E3F2FD;
 }
 
+.nav-link.active {
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: #adb5bd;
+}
+
+.container {
+    margin-top: 50px;
+}
+
 .container-dashboard {
     display: flex;
     gap: 20px;
@@ -48,6 +60,7 @@ body {
     text-align: center;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     color: #E3F2FD;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .progress {
@@ -66,6 +79,10 @@ body {
     padding: 12px;
 }
 
+.table td {
+    color: #E3F2FD;
+}
+
 .diary-entry {
     background: #5A9FD8;
     padding: 15px;
@@ -79,4 +96,12 @@ body {
     font-weight: 600;
     color: #E3F2FD;
     margin-bottom: 10px;
+}
+
+#registerForm, #signInModal, h5, #workoutForm, #nutritionForm {
+    color: #0b4f83;
+}
+
+.list-group-item {
+    cursor: pointer;
 }
