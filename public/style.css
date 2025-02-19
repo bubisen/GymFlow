@@ -63,6 +63,11 @@ body {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 .progress {
     height: 20px;
     border-radius: 10px;
@@ -104,4 +109,16 @@ body {
 
 .list-group-item {
     cursor: pointer;
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+#calendar {
+    background: #0b4f83;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    color: #E3F2FD;
 }

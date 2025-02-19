@@ -259,3 +259,45 @@ function updateContent(category) {
 
     content.innerHTML = html;
 }
+
+// Add the following part to integrate the calendar and workout plan addition
+
+document.addEventListener('DOMContentLoaded', function() {
+    let calendarEl = document.getElementById('calendar');
+
+    let calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek,timeGridDay'
+        },
+        selectable: true,
+        select: function(info) {
+            let date = info.startStr;
+            let workoutDateInput = document.getElementById('workoutDate');
+            workoutDateInput.value = date;
+            let addWorkoutModal = new bootstrap.Modal(document.getElementById('addWorkoutModal'));
+            addWorkoutModal.show();
+        }
+    });
+
+    calendar.render();
+
+    document.getElementById('addWorkoutButton').addEventListener('click', function() {
+        let date = document.getElementById('workoutDate').value;
+        let type = document.getElementById('workoutType').value;
+        let duration = document.getElementById('workoutDuration').value;
+
+        if (date && type && duration) {
+            calendar.addEvent({
+                title: `${type} (${duration} perc)`,
+                start: date,
+                allDay: true
+            });
+
+            let addWorkoutModal = bootstrap.Modal.getInstance(document.getElementById('addWorkoutModal'));
+            addWorkoutModal.hide();
+        }
+    });
+});
