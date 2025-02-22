@@ -51,34 +51,46 @@ function updateDashboard() {
     });
 }
 
-// Save workouts to localStorage
-function saveWorkoutsToLocalStorage() {
-    localStorage.setItem('workouts', JSON.stringify(workouts));
+// Save workouts to server
+async function saveWorkoutsToServer() {
+    await fetch('/api/workouts', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(workouts)
+    });
 }
 
-// Load workouts from localStorage
-function loadWorkoutsFromLocalStorage() {
-    const savedWorkouts = localStorage.getItem('workouts');
-    if (savedWorkouts) {
-        workouts = JSON.parse(savedWorkouts);
+// Load workouts from server
+async function loadWorkoutsFromServer() {
+    const response = await fetch('/api/workouts');
+    if (response.ok) {
+        workouts = await response.json();
     }
 }
 
-// Save nutrition to localStorage
-function saveNutritionToLocalStorage() {
-    localStorage.setItem('nutrition', JSON.stringify(nutrition));
+// Save nutrition to server
+async function saveNutritionToServer() {
+    await fetch('/api/nutrition', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(nutrition)
+    });
 }
 
-// Load nutrition from localStorage
-function loadNutritionFromLocalStorage() {
-    const savedNutrition = localStorage.getItem('nutrition');
-    if (savedNutrition) {
-        nutrition = JSON.parse(savedNutrition);
+// Load nutrition from server
+async function loadNutritionFromServer() {
+    const response = await fetch('/api/nutrition');
+    if (response.ok) {
+        nutrition = await response.json();
     }
 }
 
 // Add Workout Handler
-document.getElementById('saveWorkout').addEventListener('click', () => {
+document.getElementById('saveWorkout').addEventListener('click', async () => {
     const date = document.getElementById('date').value;
     const exercise = document.getElementById('exercise').value;
     const weight = parseFloat(document.getElementById('weight').value);
@@ -86,7 +98,7 @@ document.getElementById('saveWorkout').addEventListener('click', () => {
     const sets = parseInt(document.getElementById('sets').value);
 
     workouts.push({ date, exercise, weight, reps, sets });
-    saveWorkoutsToLocalStorage(); // Save to localStorage
+    await saveWorkoutsToServer(); // Save to server
     updateDashboard(); // Update the dashboard with new data
 
     document.getElementById('date').value = '';
@@ -101,7 +113,7 @@ document.getElementById('saveWorkout').addEventListener('click', () => {
 });
 
 // Add Nutrition Handler
-document.getElementById('saveMeal').addEventListener('click', () => {
+document.getElementById('saveMeal').addEventListener('click', async () => {
     const mealDate = document.getElementById('mealDate').value;
     const meal = document.getElementById('meal').value;
     const calories = parseInt(document.getElementById('calories').value);
@@ -110,7 +122,7 @@ document.getElementById('saveMeal').addEventListener('click', () => {
     const fats = parseInt(document.getElementById('fats').value);
 
     nutrition.push({ mealDate, meal, calories, proteins, carbs, fats });
-    saveNutritionToLocalStorage(); // Save to localStorage
+    await saveNutritionToServer(); // Save to server
 
     const nutritionTable = document.getElementById('nutritionTable').getElementsByTagName('tbody')[0];
     nutritionTable.innerHTML = ''; // Clear current rows
@@ -136,168 +148,9 @@ document.getElementById('saveMeal').addEventListener('click', () => {
     nutritionModal.hide();
 });
 
-document.getElementById('registerButton').addEventListener('click', function() {
-    // Here you can add logic to handle registration, if necessary
-    // Jelszó >= 8 karakter
-    // email-nek legyen @ stb
-});
-
-document.getElementById('signInButton').addEventListener('click', function() {
-    // Here you can add logic to handle sign-in, if necessary
-    // megnézi hogy egyezik e az adatbázisban lévő adattal és utána betölti a fiók adatait
-    // hiba kód ha nincs ilyen fiók
-});
-
 // Adatok megjelenítése a Weboldal betöltésekor
-window.onload = function() {
-    loadWorkoutsFromLocalStorage();
-    loadNutritionFromLocalStorage();
+window.onload = async function() {
+    await loadWorkoutsFromServer();
+    await loadNutritionFromServer();
     updateDashboard();
 };
-
-function updateContent(category) {
-    const content = document.getElementById('content');
-    let html = '';
-
-    switch (category) {
-        case 'Táplálkozás':
-            html = `
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Táplálkozás elem 1</h5>
-                        <p class="card-text">Ez egy táplálkozás elem leírása.</p>
-                    </div>
-                </div>
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Táplálkozás elem 2</h5>
-                        <p class="card-text">Ez egy másik táplálkozás elem leírása.</p>
-                    </div>
-                </div>`;
-            break;
-        case 'Ranglista':
-            html = `
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Ranglista elem 1</h5>
-                        <p class="card-text">Ez egy ranglista elem leírása.</p>
-                    </div>
-                </div>
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Ranglista elem 2</h5>
-                        <p class="card-text">Ez egy másik ranglista elem leírása.</p>
-                    </div>
-                </div>`;
-            break;
-        case 'Videók':
-            html = `
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Videók elem 1</h5>
-                        <p class="card-text">Ez egy videók elem leírása.</p>
-                    </div>
-                </div>
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Videók elem 2</h5>
-                        <p class="card-text">Ez egy másik videók elem leírása.</p>
-                    </div>
-                </div>`;
-            break;
-        case 'Alvás':
-            html = `
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Alvás elem 1</h5>
-                        <p class="card-text">Ez egy alvás elem leírása.</p>
-                    </div>
-                </div>
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Alvás elem 2</h5>
-                        <p class="card-text">Ez egy másik alvás elem leírása.</p>
-                    </div>
-                </div>`;
-            break;
-        case 'Rekordok':
-            html = `
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Rekordok elem 1</h5>
-                        <p class="card-text">Ez egy rekordok elem leírása.</p>
-                    </div>
-                </div>
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Rekordok elem 2</h5>
-                        <p class="card-text">Ez egy másik rekordok elem leírása.</p>
-                    </div>
-                </div>`;
-            break;
-        default:
-            html = `
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Példa elem 1</h5>
-                        <p class="card-text">Ez egy példa elem leírása.</p>
-                    </div>
-                </div>
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Példa elem 2</h5>
-                        <p class="card-text">Ez egy másik példa elem leírása.</p>
-                    </div>
-                </div>
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Példa elem 3</h5>
-                        <p class="card-text">Ez egy harmadik példa elem leírása.</p>
-                    </div>
-                </div>`;
-    }
-
-    content.innerHTML = html;
-}
-
-// Add the following part to integrate the calendar and workout plan addition
-
-document.addEventListener('DOMContentLoaded', function() {
-    let calendarEl = document.getElementById('calendar');
-
-    let calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth',
-        headerToolbar: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'dayGridMonth,timeGridWeek,timeGridDay'
-        },
-        selectable: true,
-        select: function(info) {
-            let date = info.startStr;
-            let workoutDateInput = document.getElementById('workoutDate');
-            workoutDateInput.value = date;
-            let addWorkoutModal = new bootstrap.Modal(document.getElementById('addWorkoutModal'));
-            addWorkoutModal.show();
-        }
-    });
-
-    calendar.render();
-
-    document.getElementById('addWorkoutButton').addEventListener('click', function() {
-        let date = document.getElementById('workoutDate').value;
-        let type = document.getElementById('workoutType').value;
-        let duration = document.getElementById('workoutDuration').value;
-
-        if (date && type && duration) {
-            calendar.addEvent({
-                title: `${type} (${duration} perc)`,
-                start: date,
-                allDay: true
-            });
-
-            let addWorkoutModal = bootstrap.Modal.getInstance(document.getElementById('addWorkoutModal'));
-            addWorkoutModal.hide();
-        }
-    });
-});

@@ -1,0 +1,550 @@
+[
+    {
+        "name": "Csirkemell (sült)",
+        "kaloria": "165 kcal",
+        "feherje": "31 g",
+        "zsir": "3.6 g",
+        "szenhidrat": "0 g"
+    },
+    {
+        "name": "Csirkecomb (sült)",
+        "kaloria": "210 kcal",
+        "feherje": "27 g",
+        "zsir": "10 g",
+        "szenhidrat": "0 g"
+    },
+    {
+        "name": "Marhahús (sült)",
+        "kaloria": "250 kcal",
+        "feherje": "26 g",
+        "zsir": "17 g",
+        "szenhidrat": "0 g"
+    },
+    {
+        "name": "Sertéshús (sült)",
+        "kaloria": "290 kcal",
+        "feherje": "25 g",
+        "zsir": "20 g",
+        "szenhidrat": "0 g"
+    },
+    {
+        "name": "Lazac (sült)",
+        "kaloria": "206 kcal",
+        "feherje": "22 g",
+        "zsir": "13 g",
+        "szenhidrat": "0 g"
+    },
+    {
+        "name": "Tonhal (sült)",
+        "kaloria": "130 kcal",
+        "feherje": "29 g",
+        "zsir": "1 g",
+        "szenhidrat": "0 g"
+    },
+    {
+        "name": "Hekk (sült)",
+        "kaloria": "150 kcal",
+        "feherje": "20 g",
+        "zsir": "5 g",
+        "szenhidrat": "0 g"
+    },
+    {
+        "name": "Pisztráng (grillezett)",
+        "kaloria": "190 kcal",
+        "feherje": "22 g",
+        "zsir": "11 g",
+        "szenhidrat": "0 g"
+    },
+    {
+        "name": "Pulykamell (sült)",
+        "kaloria": "140 kcal",
+        "feherje": "30 g",
+        "zsir": "1.5 g",
+        "szenhidrat": "0 g"
+    },
+    {
+        "name": "Bárányhús (sült)",
+        "kaloria": "250 kcal",
+        "feherje": "25 g",
+        "zsir": "18 g",
+        "szenhidrat": "0 g"
+    },
+    {
+        "name": "Füstölt sonka",
+        "kaloria": "220 kcal",
+        "feherje": "24 g",
+        "zsir": "14 g",
+        "szenhidrat": "0 g"
+    },
+    {
+        "name": "Bacon",
+        "kaloria": "540 kcal",
+        "feherje": "37 g",
+        "zsir": "42 g",
+        "szenhidrat": "0 g"
+    },
+    {
+        "name": "Kolbász (sült)",
+        "kaloria": "350 kcal",
+        "feherje": "18 g",
+        "zsir": "30 g",
+        "szenhidrat": "2 g"
+    },
+    {
+        "name": "Tojás",
+        "kaloria": "155 kcal",
+        "feherje": "13 g",
+        "zsir": "11 g",
+        "szenhidrat": "1.1 g"
+    },
+    {
+        "name": "Tej (1.5%)",
+        "kaloria": "42 kcal",
+        "feherje": "3.4 g",
+        "zsir": "1.5 g",
+        "szenhidrat": "5 g"
+    },
+    {
+        "name": "Joghurt (natúr, 3.5%)",
+        "kaloria": "61 kcal",
+        "feherje": "3.5 g",
+        "zsir": "3.3 g",
+        "szenhidrat": "4.7 g"
+    },
+    {
+        "name": "Sajt (trappista)",
+        "kaloria": "380 kcal",
+        "feherje": "25 g",
+        "zsir": "30 g",
+        "szenhidrat": "1.3 g"
+    },
+    {
+        "name": "Tejföl (20%)",
+        "kaloria": "204 kcal",
+        "feherje": "3 g",
+        "zsir": "20 g",
+        "szenhidrat": "4 g"
+    },
+    {
+        "name": "Kefir (1.5%)",
+        "kaloria": "50 kcal",
+        "feherje": "3.5 g",
+        "zsir": "1.5 g",
+        "szenhidrat": "5 g"
+    },
+    {
+        "name": "Túró (félzsíros)",
+        "kaloria": "150 kcal",
+        "feherje": "16 g",
+        "zsir": "7 g",
+        "szenhidrat": "3 g"
+    },
+    {
+        "name": "Kockasajt",
+        "kaloria": "250 kcal",
+        "feherje": "14 g",
+        "zsir": "22 g",
+        "szenhidrat": "2 g"
+    },
+    {
+        "name": "Brokkoli (főtt)",
+        "kaloria": "55 kcal",
+        "feherje": "5 g",
+        "zsir": "0.6 g",
+        "szenhidrat": "11 g"
+    },
+    {
+        "name": "Répa (nyers)",
+        "kaloria": "41 kcal",
+        "feherje": "1 g",
+        "zsir": "0.2 g",
+        "szenhidrat": "10 g"
+    },
+    {
+        "name": "Paradicsom",
+        "kaloria": "18 kcal",
+        "feherje": "1 g",
+        "zsir": "0.2 g",
+        "szenhidrat": "4 g"
+    },
+    {
+        "name": "Uborka",
+        "kaloria": "15 kcal",
+        "feherje": "0.6 g",
+        "zsir": "0.2 g",
+        "szenhidrat": "3 g"
+    },
+    {
+        "name": "Paprika",
+        "kaloria": "31 kcal",
+        "feherje": "1 g",
+        "zsir": "0.3 g",
+        "szenhidrat": "6 g"
+    },
+    {
+        "name": "Káposzta (nyers)",
+        "kaloria": "25 kcal",
+        "feherje": "1.3 g",
+        "zsir": "0.2 g",
+        "szenhidrat": "6 g"
+    },
+    {
+        "name": "Alma",
+        "kaloria": "52 kcal",
+        "feherje": "0.3 g",
+        "zsir": "0.2 g",
+        "szenhidrat": "14 g"
+    },
+    {
+        "name": "Banán",
+        "kaloria": "89 kcal",
+        "feherje": "1.1 g",
+        "zsir": "0.3 g",
+        "szenhidrat": "23 g"
+    },
+    {
+        "name": "Narancs",
+        "kaloria": "47 kcal",
+        "feherje": "0.9 g",
+        "zsir": "0.1 g",
+        "szenhidrat": "12 g"
+    },
+    {
+        "name": "Szőlő",
+        "kaloria": "69 kcal",
+        "feherje": "0.7 g",
+        "zsir": "0.2 g",
+        "szenhidrat": "18 g"
+    },
+    {
+        "name": "Görögdinnye",
+        "kaloria": "30 kcal",
+        "feherje": "0.6 g",
+        "zsir": "0.2 g",
+        "szenhidrat": "8 g"
+    },
+    {
+        "name": "Eper",
+        "kaloria": "32 kcal",
+        "feherje": "0.7 g",
+        "zsir": "0.3 g",
+        "szenhidrat": "8 g"
+    },
+    {
+        "name": "Zabpehely",
+        "kaloria": "389 kcal",
+        "feherje": "17 g",
+        "zsir": "7 g",
+        "szenhidrat": "66 g"
+    },
+    {
+        "name": "Fehér kenyér",
+        "kaloria": "265 kcal",
+        "feherje": "9 g",
+        "zsir": "3.2 g",
+        "szenhidrat": "49 g"
+    },
+    {
+        "name": "Teljes kiőrlésű kenyér",
+        "kaloria": "247 kcal",
+        "feherje": "13 g",
+        "zsir": "3.4 g",
+        "szenhidrat": "41 g"
+    },
+    {
+        "name": "Rizs (főtt)",
+        "kaloria": "130 kcal",
+        "feherje": "2.7 g",
+        "zsir": "0.3 g",
+        "szenhidrat": "28 g"
+    },
+    {
+        "name": "Burgonya (főtt)",
+        "kaloria": "86 kcal",
+        "feherje": "2 g",
+        "zsir": "0.1 g",
+        "szenhidrat": "20 g"
+    },
+    {
+        "name": "Tészta (főtt)",
+        "kaloria": "130 kcal",
+        "feherje": "5 g",
+        "zsir": "1 g",
+        "szenhidrat": "25 g"
+    },
+    {
+        "name": "Lángos",
+        "kaloria": "410 kcal",
+        "feherje": "8 g",
+        "zsir": "22 g",
+        "szenhidrat": "45 g"
+    },
+    {
+        "name": "Kifli",
+        "kaloria": "290 kcal",
+        "feherje": "8 g",
+        "zsir": "7 g",
+        "szenhidrat": "54 g"
+    },
+    {
+        "name": "Zsemle",
+        "kaloria": "270 kcal",
+        "feherje": "8 g",
+        "zsir": "6 g",
+        "szenhidrat": "50 g"
+    },
+    {
+        "name": "Csokoládé (ét, 70%)",
+        "kaloria": "600 kcal",
+        "feherje": "7.9 g",
+        "zsir": "43 g",
+        "szenhidrat": "45 g"
+    },
+    {
+        "name": "Mogyoróvaj",
+        "kaloria": "588 kcal",
+        "feherje": "25 g",
+        "zsir": "50 g",
+        "szenhidrat": "20 g"
+    },
+    {
+        "name": "Palacsinta (lekváros)",
+        "kaloria": "210 kcal",
+        "feherje": "6 g",
+        "zsir": "9 g",
+        "szenhidrat": "30 g"
+    },
+    {
+        "name": "Kakaós csiga",
+        "kaloria": "410 kcal",
+        "feherje": "7 g",
+        "zsir": "20 g",
+        "szenhidrat": "50 g"
+    },
+    {
+        "name": "Fánk",
+        "kaloria": "450 kcal",
+        "feherje": "6 g",
+        "zsir": "25 g",
+        "szenhidrat": "55 g"
+    },
+    {
+        "name": "Mézeskalács",
+        "kaloria": "380 kcal",
+        "feherje": "6 g",
+        "zsir": "10 g",
+        "szenhidrat": "65 g"
+    },
+    {
+        "name": "Somlói galuska",
+        "kaloria": "320 kcal",
+        "feherje": "6 g",
+        "zsir": "14 g",
+        "szenhidrat": "40 g"
+    },
+    {
+        "name": "Zserbó",
+        "kaloria": "470 kcal",
+        "feherje": "6 g",
+        "zsir": "30 g",
+        "szenhidrat": "50 g"
+    },
+    {
+        "name": "Kóla",
+        "kaloria": "42 kcal",
+        "feherje": "0 g",
+        "zsir": "0 g",
+        "szenhidrat": "10.6 g"
+    },
+    {
+        "name": "Narancslé",
+        "kaloria": "45 kcal",
+        "feherje": "0.7 g",
+        "zsir": "0.2 g",
+        "szenhidrat": "10 g"
+    },
+    {
+        "name": "Almalé",
+        "kaloria": "46 kcal",
+        "feherje": "0.1 g",
+        "zsir": "0.2 g",
+        "szenhidrat": "11 g"
+    },
+    {
+        "name": "Sör",
+        "kaloria": "43 kcal",
+        "feherje": "0.5 g",
+        "zsir": "0 g",
+        "szenhidrat": "3.5 g"
+    },
+    {
+        "name": "Bor (vörös)",
+        "kaloria": "85 kcal",
+        "feherje": "0.1 g",
+        "zsir": "0 g",
+        "szenhidrat": "2.6 g"
+    },
+    {
+        "name": "Kávé (cukor nélkül)",
+        "kaloria": "2 kcal",
+        "feherje": "0.1 g",
+        "zsir": "0 g",
+        "szenhidrat": "0 g"
+    },
+    {
+        "name": "Tea (cukor nélkül)",
+        "kaloria": "1 kcal",
+        "feherje": "0.1 g",
+        "zsir": "0 g",
+        "szenhidrat": "0 g"
+    },
+    {
+        "name": "Gulyásleves",
+        "kaloria": "150 kcal",
+        "feherje": "10 g",
+        "zsir": "8 g",
+        "szenhidrat": "12 g"
+    },
+    {
+        "name": "Töltött káposzta",
+        "kaloria": "190 kcal",
+        "feherje": "12 g",
+        "zsir": "9 g",
+        "szenhidrat": "14 g"
+    },
+    {
+        "name": "Pörkölt (sertés)",
+        "kaloria": "220 kcal",
+        "feherje": "17 g",
+        "zsir": "15 g",
+        "szenhidrat": "5 g"
+    },
+    {
+        "name": "Túrós csusza",
+        "kaloria": "340 kcal",
+        "feherje": "12 g",
+        "zsir": "15 g",
+        "szenhidrat": "38 g"
+    },
+    {
+        "name": "Rántott hús",
+        "kaloria": "290 kcal",
+        "feherje": "22 g",
+        "zsir": "18 g",
+        "szenhidrat": "10 g"
+    },
+    {
+        "name": "Rántott sajt",
+        "kaloria": "320 kcal",
+        "feherje": "15 g",
+        "zsir": "18 g",
+        "szenhidrat": "10 g"
+    },
+    {
+        "name": "Halászlé",
+        "kaloria": "100 kcal",
+        "feherje": "10 g",
+        "zsir": "5 g",
+        "szenhidrat": "5 g"
+    },
+    {
+        "name": "Kakaós tej",
+        "kaloria": "80 kcal",
+        "feherje": "4 g",
+        "zsir": "2 g",
+        "szenhidrat": "12 g"
+    },
+    {
+        "name": "Cékla (főtt)",
+        "kaloria": "43 kcal",
+        "feherje": "2 g",
+        "zsir": "0.2 g",
+        "szenhidrat": "10 g"
+    },
+    {
+        "name": "Avokádó",
+        "kaloria": "160 kcal",
+        "feherje": "2 g",
+        "zsir": "15 g",
+        "szenhidrat": "9 g"
+    },
+    {
+        "name": "Padlizsán",
+        "kaloria": "25 kcal",
+        "feherje": "1 g",
+        "zsir": "0.2 g",
+        "szenhidrat": "6 g"
+    },
+    {
+        "name": "Cukkini",
+        "kaloria": "17 kcal",
+        "feherje": "1.2 g",
+        "zsir": "0.3 g",
+        "szenhidrat": "3.1 g"
+    },
+    {
+        "name": "Spenót",
+        "kaloria": "23 kcal",
+        "feherje": "2.9 g",
+        "zsir": "0.4 g",
+        "szenhidrat": "3.6 g"
+    },
+    {
+        "name": "Karfiol",
+        "kaloria": "25 kcal",
+        "feherje": "2 g",
+        "zsir": "0.3 g",
+        "szenhidrat": "5 g"
+    },
+    {
+        "name": "Mangó",
+        "kaloria": "60 kcal",
+        "feherje": "0.8 g",
+        "zsir": "0.4 g",
+        "szenhidrat": "15 g"
+    },
+    {"name": "Körte", "kaloria": "57 kcal", "feherje": "0.4 g", "zsir": "0.1 g", "szenhidrat": "15 g"},
+    {"name": "Meggy", "kaloria": "50 kcal", "feherje": "1 g", "zsir": "0.3 g", "szenhidrat": "12 g"},
+    {"name": "Szilva", "kaloria": "46 kcal", "feherje": "0.7 g", "zsir": "0.2 g", "szenhidrat": "11 g"},
+    {"name": "Barnarizs (főtt)", "kaloria": "110 kcal", "feherje": "2.6 g", "zsir": "0.9 g", "szenhidrat": "23 g"},
+    {"name": "Bulgur (főtt)", "kaloria": "110 kcal", "feherje": "3.1 g", "zsir": "0.2 g", "szenhidrat": "25 g"},
+    {"name": "Quinoa (főtt)", "kaloria": "120 kcal", "feherje": "4 g", "zsir": "2 g", "szenhidrat": "21 g"},
+    {"name": "Kuszkusz (főtt)", "kaloria": "112 kcal", "feherje": "3.8 g", "zsir": "0.2 g", "szenhidrat": "23 g"},
+    {"name": "Rozskenyér", "kaloria": "259 kcal", "feherje": "9 g", "zsir": "3 g", "szenhidrat": "48 g"},
+    {"name": "Bagett", "kaloria": "270 kcal", "feherje": "9 g", "zsir": "4 g", "szenhidrat": "53 g"},
+    {"name": "Pita kenyér", "kaloria": "275 kcal", "feherje": "10 g", "zsir": "1 g", "szenhidrat": "55 g"},
+    {"name": "Almás pite", "kaloria": "270 kcal", "feherje": "3 g", "zsir": "12 g", "szenhidrat": "40 g"},
+    {"name": "Túrórudi", "kaloria": "150 kcal", "feherje": "6 g", "zsir": "9 g", "szenhidrat": "12 g"},
+    {"name": "Vaníliás puding", "kaloria": "120 kcal", "feherje": "3 g", "zsir": "4 g", "szenhidrat": "18 g"},
+    {"name": "Csokis keksz", "kaloria": "480 kcal", "feherje": "6 g", "zsir": "24 g", "szenhidrat": "65 g"},
+    {"name": "Puncstorta", "kaloria": "420 kcal", "feherje": "4 g", "zsir": "22 g", "szenhidrat": "55 g"},
+    {"name": "Tejkaramella", "kaloria": "400 kcal", "feherje": "2 g", "zsir": "10 g", "szenhidrat": "80 g"},
+    {"name": "Forró csoki", "kaloria": "220 kcal", "feherje": "5 g", "zsir": "8 g", "szenhidrat": "30 g"},
+    {"name": "Jegeskávé", "kaloria": "150 kcal", "feherje": "3 g", "zsir": "5 g", "szenhidrat": "25 g"},
+    {"name": "Alkoholmentes sör", "kaloria": "37 kcal", "feherje": "0.3 g", "zsir": "0 g", "szenhidrat": "8 g"},
+    {"name": "Húsleves", "kaloria": "70 kcal", "feherje": "5 g", "zsir": "3 g", "szenhidrat": "5 g"},
+    {"name": "Lecsó", "kaloria": "110 kcal", "feherje": "3 g", "zsir": "6 g", "szenhidrat": "12 g"},
+    {"name": "Rakott krumpli", "kaloria": "320 kcal", "feherje": "9 g", "zsir": "18 g", "szenhidrat": "30 g"},
+    {"name": "Hortobágyi palacsinta", "kaloria": "250 kcal", "feherje": "10 g", "zsir": "12 g", "szenhidrat": "28 g"},
+    {"name": "Székelykáposzta", "kaloria": "180 kcal", "feherje": "12 g", "zsir": "8 g", "szenhidrat": "15 g"},
+    {"name": "Pásztortarhonya", "kaloria": "300 kcal", "feherje": "10 g", "zsir": "15 g", "szenhidrat": "35 g"},
+    {"name": "Rakott kelkáposzta", "kaloria": "280 kcal", "feherje": "12 g", "zsir": "14 g", "szenhidrat": "30 g"},
+    {"name": "Krumplifőzelék", "kaloria": "180 kcal", "feherje": "3 g", "zsir": "7 g", "szenhidrat": "25 g"},
+    {"name": "Császármorzsa", "kaloria": "360 kcal", "feherje": "9 g", "zsir": "14 g", "szenhidrat": "50 g"},
+    {"name": "Grillezett csirkeszárny", "kaloria": "290 kcal", "feherje": "27 g", "zsir": "19 g", "szenhidrat": "0 g"},
+    {"name": "Sült libamáj", "kaloria": "420 kcal", "feherje": "18 g", "zsir": "39 g", "szenhidrat": "2 g"},
+    {"name": "Füstölt lazac", "kaloria": "180 kcal", "feherje": "20 g", "zsir": "10 g", "szenhidrat": "0 g"},
+    {"name": "Rántott ponty", "kaloria": "250 kcal", "feherje": "22 g", "zsir": "15 g", "szenhidrat": "10 g"},
+    {"name": "Kacsa (sült)", "kaloria": "337 kcal", "feherje": "27 g", "zsir": "28 g", "szenhidrat": "0 g"},
+    {"name": "Sertéstarja (sült)", "kaloria": "300 kcal", "feherje": "26 g", "zsir": "22 g", "szenhidrat": "0 g"},
+    {"name": "Pulyka kolbász", "kaloria": "220 kcal", "feherje": "20 g", "zsir": "15 g", "szenhidrat": "2 g"},
+    {"name": "Busa (sült)", "kaloria": "150 kcal", "feherje": "18 g", "zsir": "8 g", "szenhidrat": "1 g"},
+    {"name": "Mozzarella", "kaloria": "280 kcal", "feherje": "22 g", "zsir": "17 g", "szenhidrat": "3 g"},
+    {"name": "Cheddar sajt", "kaloria": "403 kcal", "feherje": "25 g", "zsir": "33 g", "szenhidrat": "2 g"},
+    {"name": "Brie sajt", "kaloria": "334 kcal", "feherje": "21 g", "zsir": "28 g", "szenhidrat": "1 g"},
+    {"name": "Kecskesajt", "kaloria": "264 kcal", "feherje": "18 g", "zsir": "21 g", "szenhidrat": "0 g"},
+    {"name": "Parmezán", "kaloria": "431 kcal", "feherje": "38 g", "zsir": "30 g", "szenhidrat": "4 g"},
+    {"name": "Ízesített joghurt", "kaloria": "120 kcal", "feherje": "5 g", "zsir": "3 g", "szenhidrat": "15 g"}
+
+]
+    
