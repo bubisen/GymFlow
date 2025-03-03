@@ -20,9 +20,9 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#registerModal">Regisztráció</a></li>
-                    <li class="nav-item"><a class="nav-link" href="naplo.html">Napló</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Napló</a></li>
                     <li class="nav-item"><a class="nav-link" href="statisztika.html">Statisztika</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="tervek.html">Tervek</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tervek.html">Tervek</a></li>
                     <li class="nav-item"><a class="nav-link" href="adatok.html">Testmérési Adatok</a></li>
                     <li class="nav-item"><a class="nav-link" href="extra.html">Extra</a></li>
                 </ul>
@@ -30,7 +30,7 @@
         </div>
     </nav>
 
-    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="reg modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -65,7 +65,7 @@
         </div>
     </div>
 
-    <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+    <div class="log modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -93,41 +93,77 @@
     </div>
 
     <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Edzési Tervek</h2>
-                <div id="calendar"></div>
-                <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#addWorkoutModal">Edzési Terv Hozzáadása</button>
-            </div>
+        <h2 class="text-center mb-4">Statisztika</h2>
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Feladat</th>
+                        <th>Személyes Rekord</th>
+                        <th>Világ Rekord</th>
+                    </tr>
+                </thead>
+                <tbody id="recordTableBody">
+                    <tr>
+                        <td>Fekvőtámasz</td>
+                        <td>50</td>
+                        <td>105</td>
+                    </tr>
+                    <tr>
+                        <td>Guggolás</td>
+                        <td>100</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>Húzódzkodás</td>
+                        <td>20</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>Futás (5 km)</td>
+                        <td>25 perc</td>
+                        <td>12 perc</td>
+                    </tr>
+                    <tr>
+                        <td>Plank</td>
+                        <td>5 perc</td>
+                        <td>8 perc</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="text-center mt-4"></div>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addRecordModal">Rekord hozzáadása</button>
         </div>
     </div>
 
-    <div class="modal fade" id="addWorkoutModal" tabindex="-1" aria-labelledby="addWorkoutModalLabel" aria-hidden="true">
+    <!-- Add Record Modal -->
+    <div class="modal fade" id="addRecordModal" tabindex="-1" aria-labelledby="addRecordModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addWorkoutModalLabel">Edzési Terv Hozzáadása</h5>
+                    <h5 class="modal-title" id="addRecordModalLabel">Új Rekord Hozzáadása</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="workoutForm">
+                    <form id="addRecordForm">
                         <div class="mb-3">
-                            <label for="workoutDate" class="form-label">Dátum</label>
-                            <input type="date" class="form-control" id="workoutDate" required>
+                            <label for="task" class="form-label">Feladat</label>
+                            <input type="text" class="form-control" id="task" required>
                         </div>
                         <div class="mb-3">
-                            <label for="workoutType" class="form-label">Edzés Típusa</label>
-                            <input type="text" class="form-control" id="workoutType" required>
+                            <label for="personalRecord" class="form-label">Személyes Rekord</label>
+                            <input type="text" class="form-control" id="personalRecord" required>
                         </div>
                         <div class="mb-3">
-                            <label for="workoutDuration" class="form-label">Időtartam (perc)</label>
-                            <input type="number" class="form-control" id="workoutDuration" required>
+                            <label for="worldRecord" class="form-label">Világ Rekord</label>
+                            <input type="text" class="form-control" id="worldRecord" required>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mégse</button>
-                    <button type="button" class="btn btn-primary" id="addWorkoutButton">Hozzáadás</button>
+                    <button type="button" class="btn btn-primary" id="addRecordButton">Hozzáadás</button>
                 </div>
             </div>
         </div>
@@ -135,7 +171,5 @@
 
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@5.10.1/main.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@5.10.1/main.min.css">
 </body>
 </html>

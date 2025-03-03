@@ -20,17 +20,17 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#registerModal">Regisztráció</a></li>
-                    <li class="nav-item"><a class="nav-link" href="naplo.html">Napló</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Napló</a></li>
                     <li class="nav-item"><a class="nav-link" href="statisztika.html">Statisztika</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="tervek.html">Tervek</a></li>
-                    <li class="nav-item"><a class="nav-link" href="adatok.html">Testmérési Adatok</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tervek.html">Tervek</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Testmérési Adatok</a></li>
                     <li class="nav-item"><a class="nav-link" href="extra.html">Extra</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="reg modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -65,7 +65,7 @@
         </div>
     </div>
 
-    <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+    <div class="log modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -93,49 +93,99 @@
     </div>
 
     <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Edzési Tervek</h2>
-                <div id="calendar"></div>
-                <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#addWorkoutModal">Edzési Terv Hozzáadása</button>
+        <h2>Testmérési Adatok</h2>
+        <form id="measurementForm">
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="weight" class="form-label">Súly (kg)</label>
+                    <input type="number" class="form-control" id="weight" required>
+                </div>
+                <div class="col">
+                    <label for="height" class="form-label">Magasság (cm)</label>
+                    <input type="number" class="form-control" id="height" required>
+                </div>
             </div>
-        </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="bodyFat" class="form-label">Testzsír (%)</label>
+                    <input type="number" class="form-control" id="bodyFat" required>
+                </div>
+                <div class="col">
+                    <label for="muscleMass" class="form-label">Izomtömeg (kg)</label>
+                    <input type="number" class="form-control" id="muscleMass" required>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="bmi" class="form-label">BMI</label>
+                    <input type="number" class="form-control" id="bmi" readonly>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Mentés</button>
+        </form>
+
+        <h3 class="mt-5">Korábbi Mérések</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Dátum</th>
+                    <th>Súly (kg)</th>
+                    <th>Magasság (cm)</th>
+                    <th>Testzsír (%)</th>
+                    <th>Izomtömeg (kg)</th>
+                    <th>BMI</th>
+                </tr>
+            </thead>
+            <tbody id="measurementTableBody">
+                <!-- Korábbi mérések adatai ide kerülnek -->
+            </tbody>
+        </table>
     </div>
 
-    <div class="modal fade" id="addWorkoutModal" tabindex="-1" aria-labelledby="addWorkoutModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addWorkoutModalLabel">Edzési Terv Hozzáadása</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="workoutForm">
-                        <div class="mb-3">
-                            <label for="workoutDate" class="form-label">Dátum</label>
-                            <input type="date" class="form-control" id="workoutDate" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="workoutType" class="form-label">Edzés Típusa</label>
-                            <input type="text" class="form-control" id="workoutType" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="workoutDuration" class="form-label">Időtartam (perc)</label>
-                            <input type="number" class="form-control" id="workoutDuration" required>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mégse</button>
-                    <button type="button" class="btn btn-primary" id="addWorkoutButton">Hozzáadás</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    <script>
+        document.getElementById('weight').addEventListener('input', calculateBMI);
+        document.getElementById('height').addEventListener('input', calculateBMI);
+
+        function calculateBMI() {
+            const weight = parseFloat(document.getElementById('weight').value);
+            const height = parseFloat(document.getElementById('height').value) / 100; // convert cm to meters
+
+            if (!isNaN(weight) && !isNaN(height) && height > 0) {
+                const bmi = weight / (height * height);
+                document.getElementById('bmi').value = bmi.toFixed(2);
+            } else {
+                document.getElementById('bmi').value = '';
+            }
+        }
+
+        document.getElementById('measurementForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const weight = document.getElementById('weight').value;
+            const height = document.getElementById('height').value;
+            const bodyFat = document.getElementById('bodyFat').value;
+            const muscleMass = document.getElementById('muscleMass').value;
+            const bmi = document.getElementById('bmi').value;
+            const date = new Date().toLocaleDateString();
+
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td>${date}</td>
+                <td>${weight}</td>
+                <td>${height}</td>
+                <td>${bodyFat}</td>
+                <td>${muscleMass}</td>
+                <td>${bmi}</td>
+            `;
+
+            document.getElementById('measurementTableBody').appendChild(newRow);
+
+            document.getElementById('measurementForm').reset();
+            document.getElementById('bmi').value = '';
+        });
+    </script>
 
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@5.10.1/main.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@5.10.1/main.min.css">
 </body>
 </html>
