@@ -1,0 +1,89 @@
+{
+    "Mellizom": [
+      {"gyakorlat": "Fekvenyomás rúddal", "cél": "Nagy mellizom"},
+      {"gyakorlat": "Fekvenyomás kézisúlyzókkal", "cél": "Mélyebb izommunka"},
+      {"gyakorlat": "Döntött padon fekvenyomás", "cél": "Felső mellizom"},
+      {"gyakorlat": "Döntött padon kézisúlyzós nyomás", "cél": "Felső mellizom"},
+      {"gyakorlat": "Tárogatás kézisúlyzókkal", "cél": "Mellizom izoláció"},
+      {"gyakorlat": "Kábeles tárogatás", "cél": "Folyamatos feszülés"},
+      {"gyakorlat": "Tolódzkodás", "cél": "Mellizom alsó rész, tricepsz"},
+      {"gyakorlat": "Fekvőtámasz", "cél": "Mellizom erősítés"},
+      {"gyakorlat": "Smith-gépes fekvenyomás", "cél": "Stabilabb mozgás"},
+      {"gyakorlat": "Peck-deck gép", "cél": "Izolált mellizom"}
+    ],
+    "Hátizom": [
+      {"gyakorlat": "Széles fogású húzódzkodás", "cél": "Széles hátizom"},
+      {"gyakorlat": "Szűk fogású húzódzkodás", "cél": "Hát középső része"},
+      {"gyakorlat": "Lehúzás széles fogással", "cél": "Hátizom szélesítése"},
+      {"gyakorlat": "Lehúzás szűk fogással", "cél": "Mély hátizmok"},
+      {"gyakorlat": "Evezés rúddal", "cél": "Hát vastagság növelése"},
+      {"gyakorlat": "Evezés kézisúlyzóval", "cél": "Oldalsó hátizom"},
+      {"gyakorlat": "T-rudas evezés", "cél": "Hát középső és alsó része"},
+      {"gyakorlat": "Kábeles evezés", "cél": "Trapézizom aktiválása"},
+      {"gyakorlat": "Hyperextenzió", "cél": "Gerincmerevítők, alsó hát"},
+      {"gyakorlat": "Felhúzás", "cél": "Teljes hát komplex edzése"}
+    ],
+    "Vállizom": [
+      {"gyakorlat": "Vállból nyomás rúddal", "cél": "Elülső vállizom"},
+      {"gyakorlat": "Vállból nyomás kézisúlyzókkal", "cél": "Nagyobb mozgástartomány"},
+      {"gyakorlat": "Oldalemelés", "cél": "Oldalsó vállizom"},
+      {"gyakorlat": "Előreemelés", "cél": "Elülső vállizom"},
+      {"gyakorlat": "Döntött törzsű oldalemelés", "cél": "Hátsó vállizom"},
+      {"gyakorlat": "Arnold-nyomás", "cél": "Teljes vállizom"},
+      {"gyakorlat": "Smith-gépes vállból nyomás", "cél": "Stabilabb mozgás"},
+      {"gyakorlat": "Kábeles oldalemelés", "cél": "Folyamatos feszülés"},
+      {"gyakorlat": "Fordított pec-deck", "cél": "Hátsó vállizom"},
+      {"gyakorlat": "Face pull", "cél": "Hátsó váll és trapézizom"}
+    ],
+    "Farizom": [
+    {"gyakorlat": "Csípőemelés", "cél": "Főként a nagy farizmot célozza"},
+    {"gyakorlat": "Lábemelés hátra csigán", "cél": "Izolált farizomgyakorlat"},
+    {"gyakorlat": "Glute bridge", "cél": "Csípő és farizom aktiválás"},
+    {"gyakorlat": "Bolgár guggolás", "cél": "Egyensúly és farizom fejlesztés"},
+    {"gyakorlat": "Kitörés oldalra", "cél": "Belső és külső farizom dolgozik"},
+    {"gyakorlat": "Sumo felhúzás", "cél": "Nagyobb farizomterhelés"},
+    {"gyakorlat": "Cable kickback", "cél": "Izolált farizommunka"},
+    {"gyakorlat": "Donkey kick", "cél": "Saját testsúlyos farizomgyakorlat"},
+    {"gyakorlat": "Oldalsó lábemelés", "cél": "Külső farizom erősítés"},
+    {"gyakorlat": "Hip thrust", "cél": "Az egyik legjobb farizomgyakorlat"}
+  ],
+  "Hasizom": [
+    {"gyakorlat": "Felülés", "cél": "Felső hasizmok erősítése"},
+    {"gyakorlat": "Lábemelés függeszkedve", "cél": "Alsó hasizmok edzése"},
+    {"gyakorlat": "Plank", "cél": "Teljes törzserősítő gyakorlat"},
+    {"gyakorlat": "Oldalsó plank", "cél": "Oldalsó hasizmok fejlesztése"},
+    {"gyakorlat": "Russian twist", "cél": "Ferde hasizmok dolgoztatása"},
+    {"gyakorlat": "Gépben hasprés", "cél": "Izolált hasizomedzés"},
+    {"gyakorlat": "Cable crunch", "cél": "Erősebb ellenállás a hasizmoknak"},
+    {"gyakorlat": "Kerékpáros felülés", "cél": "Keresztirányú hasizmok aktiválása"},
+    {"gyakorlat": "Függőleges térdemelés", "cél": "Mély hasizom erősítése"},
+    {"gyakorlat": "Ab wheel rollout", "cél": "Teljes törzs stabilizálás"}
+  ],
+  "Karizom": {
+    "Bicepsz": [
+      {"gyakorlat": "Scott-pad bicepszezés", "cél": "Izolált bicepszedzés"},
+      {"gyakorlat": "Állva bicepsz hajlítás rúddal", "cél": "Klasszikus bicepszgyakorlat"},
+      {"gyakorlat": "Kalapács bicepszezés", "cél": "Karizom hosszú fejének edzése"},
+      {"gyakorlat": "Koncentrált bicepszezés", "cél": "Csúcskontrakció növelése"},
+      {"gyakorlat": "Fordított fogású bicepszezés", "cél": "Alkar és bicepsz külső fejének erősítése"},
+      {"gyakorlat": "Kábeles bicepszezés", "cél": "Folyamatos feszülést biztosít"},
+      {"gyakorlat": "21-es bicepszedzés", "cél": "Több mozgástartományban erősít"},
+      {"gyakorlat": "Zottman-bicepszezés", "cél": "Alkar és bicepsz együttes edzése"},
+      {"gyakorlat": "Egykezes kábeles bicepszezés", "cél": "Izoláció és teljes mozgástartomány"},
+      {"gyakorlat": "Bicepszezés csigán", "cél": "Állandó ellenállás"}
+    ],
+    "Tricepsz": [
+      {"gyakorlat": "Tolódzkodás", "cél": "Tömeg- és erőfejlesztő gyakorlat"},
+      {"gyakorlat": "Szűk fekvenyomás", "cél": "Tricepsz és mellizom együttműködés"},
+      {"gyakorlat": "Letolás csigán", "cél": "Izolált tricepsz gyakorlat"},
+      {"gyakorlat": "Fej mögötti tricepsznyújtás kézisúlyzóval", "cél": "Tricepsz hosszú fejének edzése"},
+      {"gyakorlat": "Tricepsznyújtás két kézzel", "cél": "Szimmetrikus izomfejlesztés"},
+      {"gyakorlat": "Lórúgás", "cél": "Izolált tricepszkontrakció"},
+      {"gyakorlat": "Tricepszezés rúddal", "cél": "Több izomrost aktiválása"},
+      {"gyakorlat": "Tricepszezés csigán kötéllel", "cél": "Folyamatos feszülést biztosít"},
+      {"gyakorlat": "Franciarudas tricepszezés", "cél": "Teljes tricepsz aktiválás"},
+      {"gyakorlat": "Szűk tolódzkodás gépen", "cél": "Tricepsz izoláció"}
+    ]
+  }
+  }
+  
