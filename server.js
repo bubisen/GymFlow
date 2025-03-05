@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3200;
 const path = require('path');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -44,4 +44,10 @@ app.get('/', (req, res) => {
 
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`http://localhost:${PORT}`);
+
+  ngrok.connect(PORT).then(url => {
+    console.log(`Url: ${url}`);
+  }).catch(err=> {
+    console.error(err);
+  })
 });
