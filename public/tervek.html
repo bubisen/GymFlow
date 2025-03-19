@@ -133,7 +133,84 @@
         </div>
     </div>
 
+    <!-- Edzés táblázat -->
+<div class="container mt-5">
+    <h2>Edzés Tervek</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Dátum</th>
+                <th>Edzés Típusa</th>
+                <th>Időtartam (perc)</th>
+            </tr>
+        </thead>
+        <tbody id="workoutTableBody">
+            <!-- Itt jelennek meg az edzés adatai -->
+        </tbody>
+    </table>
+</div>
+
+
     <script src="main.js"></script>
+    <script>
+        // Az edzést hozzáadó gomb eseménykezelője
+        document.getElementById('addWorkoutButton').addEventListener('click', function() {
+            // Az űrlap adatainak kiolvasása
+            const workoutDate = document.getElementById('workoutDate').value;
+            const workoutType = document.getElementById('workoutType').value;
+            const workoutDuration = document.getElementById('workoutDuration').value;
+    
+            // Ellenőrizzük, hogy minden mező ki van-e töltve
+            if (workoutDate && workoutType && workoutDuration) {
+                // Létrehozzuk az edzés adatokat
+                const workoutData = {
+                    date: workoutDate,
+                    type: workoutType,
+                    duration: workoutDuration
+                };
+    
+                // Az edzés adatokat elmentjük a localStorage-ba
+                let workouts = JSON.parse(localStorage.getItem('workouts')) || [];
+                workouts.push(workoutData);
+                localStorage.setItem('workouts', JSON.stringify(workouts));
+    
+                // Az űrlap tisztítása
+                document.getElementById('workoutForm').reset();
+    
+                // Frissítjük a táblázatot
+                displayWorkouts();
+            } else {
+                alert('Kérjük, töltse ki az összes mezőt!');
+            }
+        });
+    
+        // A táblázat frissítése, amikor az oldal betöltődik
+        function displayWorkouts() {
+            const workouts = JSON.parse(localStorage.getItem('workouts')) || [];
+            const workoutTableBody = document.getElementById('workoutTableBody');
+    
+            // Táblázat ürítése a frissítés előtt
+            workoutTableBody.innerHTML = '';
+    
+            // Az edzéseket megjelenítjük a táblázatban
+            workouts.forEach(workout => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${workout.date}</td>
+                    <td>${workout.type}</td>
+                    <td>${workout.duration} perc</td>
+                `;
+                workoutTableBody.appendChild(row);
+            });
+        }
+    
+        // Az oldal betöltésekor az edzések betöltése
+        window.onload = function() {
+            displayWorkouts();
+        };
+    </script>
+    
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@5.10.1/main.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@5.10.1/main.min.css">
