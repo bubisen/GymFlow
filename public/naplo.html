@@ -234,7 +234,144 @@
         </div>
     </div>
 
+    
+
     <script src="main.js"></script>
+    <script>
+        // Edzés hozzáadása
+document.getElementById('addWorkoutButton').addEventListener('click', function () {
+    // Form mezők értékeinek lekérése
+    const workoutDate = document.getElementById('workoutDate').value;
+    const exercise = document.getElementById('exercise').value;
+    const weight = document.getElementById('weight').value;
+    const reps = document.getElementById('reps').value;
+    const sets = document.getElementById('sets').value;
+
+    // Ellenőrizzük, hogy minden mezőt kitöltöttek-e
+    if (workoutDate && exercise && weight && reps && sets) {
+        const workout = {
+            date: workoutDate,
+            exercise: exercise,
+            weight: weight,
+            reps: reps,
+            sets: sets
+        };
+
+        // Lekérjük a korábban mentett edzésadatokat, vagy üres tömböt hozunk létre
+        let workouts = JSON.parse(localStorage.getItem('workouts')) || [];
+
+        // Hozzáadjuk az új edzést
+        workouts.push(workout);
+
+        // Elmentjük az edzésadatokat a localStorage-ba
+        localStorage.setItem('workouts', JSON.stringify(workouts));
+
+        // Űrlap törlése
+        document.getElementById('addWorkoutForm').reset();
+
+        // Modal bezárása
+        $('#addWorkoutModal').modal('hide');
+
+        // Frissítjük az edzések táblázatát
+        renderWorkoutsTable();
+    } else {
+        alert('Kérjük, töltse ki az összes mezőt!');
+    }
+});
+
+// Táplálék hozzáadása
+document.getElementById('addNutritionButton').addEventListener('click', function () {
+    // Form mezők értékeinek lekérése
+    const nutritionDate = document.getElementById('nutritionDate').value;
+    const food = document.getElementById('food').value;
+    const calories = document.getElementById('calories').value;
+    const proteins = document.getElementById('proteins').value;
+    const carbs = document.getElementById('carbs').value;
+    const fats = document.getElementById('fats').value;
+
+    // Ellenőrizzük, hogy minden mezőt kitöltöttek-e
+    if (nutritionDate && food && calories && proteins && carbs && fats) {
+        const nutrition = {
+            date: nutritionDate,
+            food: food,
+            calories: calories,
+            proteins: proteins,
+            carbs: carbs,
+            fats: fats
+        };
+
+        // Lekérjük a korábban mentett táplálkozási adatokat, vagy üres tömböt hozunk létre
+        let nutritionData = JSON.parse(localStorage.getItem('nutrition')) || [];
+
+        // Hozzáadjuk az új táplálékadatot
+        nutritionData.push(nutrition);
+
+        // Elmentjük a táplálékadatokat a localStorage-ba
+        localStorage.setItem('nutrition', JSON.stringify(nutritionData));
+
+        // Űrlap törlése
+        document.getElementById('addNutritionForm').reset();
+
+        // Modal bezárása
+        $('#addNutritionModal').modal('hide');
+
+        // Frissítjük a táplálkozási táblázatot
+        renderNutritionTable();
+    } else {
+        alert('Kérjük, töltse ki az összes mezőt!');
+    }
+});
+
+// Edzésadatok megjelenítése
+function renderWorkoutsTable() {
+    let workouts = JSON.parse(localStorage.getItem('workouts')) || [];
+    const workoutsTableBody = document.getElementById('workoutsTable').getElementsByTagName('tbody')[0];
+
+    // Ürítjük a táblázatot, hogy ne legyenek duplikált sorok
+    workoutsTableBody.innerHTML = '';
+
+    // Minden edzésadathoz új sort adunk hozzá
+    workouts.forEach(function (workout) {
+        const row = workoutsTableBody.insertRow();
+        row.innerHTML = `
+            <td>${workout.date}</td>
+            <td>${workout.exercise}</td>
+            <td>${workout.weight}</td>
+            <td>${workout.reps}</td>
+            <td>${workout.sets}</td>
+        `;
+    });
+}
+
+// Táplálkozási adatok megjelenítése
+function renderNutritionTable() {
+    let nutritionData = JSON.parse(localStorage.getItem('nutrition')) || [];
+    const nutritionTableBody = document.getElementById('nutritionTable').getElementsByTagName('tbody')[0];
+
+    // Ürítjük a táblázatot, hogy ne legyenek duplikált sorok
+    nutritionTableBody.innerHTML = '';
+
+    // Minden táplálékadathoz új sort adunk hozzá
+    nutritionData.forEach(function (nutrition) {
+        const row = nutritionTableBody.insertRow();
+        row.innerHTML = `
+            <td>${nutrition.date}</td>
+            <td>${nutrition.food}</td>
+            <td>${nutrition.calories}</td>
+            <td>${nutrition.proteins}</td>
+            <td>${nutrition.carbs}</td>
+            <td>${nutrition.fats}</td>
+        `;
+    });
+}
+
+// Oldal betöltésekor rendereljük az edzéseket és a táplálékot
+window.onload = function () {
+    renderWorkoutsTable();
+    renderNutritionTable();
+};
+
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
