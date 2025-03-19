@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GymFlow</title>
+    <title>GymFlow - Napló</title>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -11,9 +11,13 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-md">
+        <!-- Using navbar-expand-md to make it responsive on smaller screens -->
         <div class="container-fluid">
-            <a class="navbar-brand navbar-img" href="fooldal.html"><img src="kepek/logopicture.png" alt=""> <img src="kepek/logotext.png" alt=""></a>
+            <a class="navbar-brand navbar-img" href="fooldal.html">
+                <img src="kepek/logopicture.png" alt="" width="auto" height="50">
+                <img src="kepek/logotext.png" alt="" height="50">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -92,220 +96,141 @@
         </div>
     </div>
 
-    <div class="container container-dashboard">
-        <div class="info-section">
-            <div class="card mb-3">
-                <h5>Edzések száma</h5>
-                <p id="totalWorkouts" class="display-6">0</p>
-            </div>
-            <div class="card mb-3">
-                <h5>Elégetett kalória</h5>
-                <p id="totalCalories" class="display-6">0 kcal</p>
-            </div>
-            <div class="card mb-3">
-                <h5>Súly mozgatva</h5>
-                <p id="achievementWeightsLifted" class="display-6">0 kg</p>
-            </div>
-            <div class="card mb-3">
-                <h5>Ismétlések</h5>
-                <p id="achievementRepsLifted" class="display-6">0</p>
-            </div>
-            <div class="card mb-3">
-                <h5>Sorozatok</h5>
-                <p id="achievementSetsLifted" class="display-6">0</p>
-            </div>
-
-            <div class="card mb-3">
-                <h5>Heti edzés cél</h5>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 75%;">75%</div> <!-- Cél - Súly mozgatva? | Kérdezze meg a felhasználót a célért -->
+    <!-- Modal for adding workout -->
+    <div class="modal fade" id="addWorkoutModal" tabindex="-1" aria-labelledby="addWorkoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addWorkoutModalLabel">Edzés hozzáadása</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            </div>
-            <div class="card mb-3">
-                <h5>Kalória cél</h5>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 60%;">60%</div> <!-- Cél - Kalória elégetve? | Kérdezze meg a felhasználót a célért -->
+                <div class="modal-body">
+                    <form id="addWorkoutForm">
+                        <div class="mb-3">
+                            <label for="workoutDate" class="form-label">Dátum</label>
+                            <input type="date" class="form-control" id="workoutDate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exercise" class="form-label">Gyakorlat</label>
+                            <input type="text" class="form-control" id="exercise" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="weight" class="form-label">Súly (kg)</label>
+                            <input type="number" class="form-control" id="weight" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reps" class="form-label">Ismétlések</label>
+                            <input type="number" class="form-control" id="reps" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="sets" class="form-label">Sorozatok</label>
+                            <input type="number" class="form-control" id="sets" required>
+                        </div>
+                    </form>
                 </div>
-            </div>
-
-            <div class="card edzes">
-                <h5 class="text-center">Legutóbbi Edzések</h5>
-                <table class="table">
-                    <thead> <!-- A 3 legújabb edzés adatai itt jelenjenek meg | Talán nem kéne mert szarul néz ki -->
-                        <tr>
-                            <th>Dátum</th>
-                            <th>Edzés típusa</th>
-                            <th>Időtartam</th>
-                            <th>Elégett kalória</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>2024-02-10</td>
-                            <td>Futás</td>
-                            <td>45 perc</td>
-                            <td>400 kcal</td>
-                        </tr>
-                        <tr>
-                            <td>2024-02-09</td>
-                            <td>Súlyemelés</td>
-                            <td>60 perc</td>
-                            <td>500 kcal</td>
-                        </tr>
-                        <tr>
-                            <td>2024-02-08</td>
-                            <td>Jóga</td>
-                            <td>30 perc</td>
-                            <td>200 kcal</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="diary-section">
-            <h1 class="text-center mb-3">Edzésnapló</h1>
-
-            <!--<select class="select-activity" id="activitySelect">
-                <option value="running">Futás</option>
-                <option value="weightlifting">Súlyemelés</option>
-                <option value="yoga">Jóga</option>
-                <option value="cycling">Kerékpározás</option>
-                <option value="swimming">Úszás</option>
-            </select> -->
-
-            <!-- Workouts Section -->
-        <section id="workouts" class="mb-5">
-            <h2>Edzések</h2>
-            <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addWorkoutModal">Hozzáadás</button>
-            <div class="card">
-                <div class="card-body">
-                    <table class="table table-striped" id="workoutsTable">
-                        <thead>
-                            <tr>
-                                <th>Dátum</th>
-                                <th>Gyakorlat</th>
-                                <th>Súly (kg)</th>
-                                <th>Ismétlések</th>
-                                <th>Sorozatok</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- User data will be appended here dynamically -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- Nutrition Section -->
-        <section id="nutrition" class="mb-5">
-            <h2>Táplálék</h2>
-            <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addNutritionModal">Hozzáadás</button>
-            <div class="card">
-                <div class="card-body">
-                    <table class="table table-striped" id="nutritionTable">
-                        <thead>
-                            <tr>
-                                <th>Dátum</th>
-                                <th>Étel</th>
-                                <th>Kalóriák</th>
-                                <th>Proteinek (g)</th>
-                                <th>Szénhidrátok (g)</th>
-                                <th>Zsírok (g)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- User data will be appended here dynamically -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <div class="modal fade" id="addWorkoutModal" tabindex="-1" aria-labelledby="addWorkoutModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="addWorkoutModalLabel">Edzés hozzáadása</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form id="workoutForm">
-                            <div class="mb-3">
-                                <label for="date" class="form-label">Dátum</label>
-                                <input type="date" class="form-control" id="date" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="exercise" class="form-label">Gyakorlat</label>
-                                <input type="text" class="form-control" id="exercise" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="weight" class="form-label">Súly (kg)</label>
-                                <input type="number" class="form-control" id="weight" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="reps" class="form-label">Ismétlés</label>
-                                <input type="number" class="form-control" id="reps" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="sets" class="form-label">Sorozatok</label>
-                                <input type="number" class="form-control" id="sets" required>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezár</button>
-                        <button type="button" class="btn btn-primary" id="saveWorkout">Mentés</button>
-                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mégse</button>
+                    <button type="button" class="btn btn-primary" id="addWorkoutButton">Hozzáadás</button>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Nutrition Modal -->
-        <div class="modal fade" id="addNutritionModal" tabindex="-1" aria-labelledby="addNutritionModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="addNutritionModalLabel">Táplálék hozzáadása</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form id="nutritionForm">
-                            <div class="mb-3">
-                                <label for="mealDate" class="form-label">Dátum</label>
-                                <input type="date" class="form-control" id="mealDate" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="meal" class="form-label">Étel</label>
-                                <input type="text" class="form-control" id="meal" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="calories" class="form-label">Kalóriák</label>
-                                <input type="number" class="form-control" id="calories" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="proteins" class="form-label">Proteinek (g)</label>
-                                <input type="number" class="form-control" id="proteins" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="carbs" class="form-label">Szénhidrátok (g)</label>
-                                <input type="number" class="form-control" id="carbs" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="fats" class="form-label">Zsírok (g)</label>
-                                <input type="number" class="form-control" id="fats" required>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezár</button>
-                        <button type="button" class="btn btn-primary" id="saveMeal">Mentés</button>
-                    </div>
+    <!-- Modal for adding nutrition -->
+    <div class="modal fade" id="addNutritionModal" tabindex="-1" aria-labelledby="addNutritionModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addNutritionModalLabel">Táplálék hozzáadása</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addNutritionForm">
+                        <div class="mb-3">
+                            <label for="nutritionDate" class="form-label">Dátum</label>
+                            <input type="date" class="form-control" id="nutritionDate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="food" class="form-label">Étel</label>
+                            <input type="text" class="form-control" id="food" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="calories" class="form-label">Kalóriák</label>
+                            <input type="number" class="form-control" id="calories" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="proteins" class="form-label">Proteinek (g)</label>
+                            <input type="number" class="form-control" id="proteins" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="carbs" class="form-label">Szénhidrátok (g)</label>
+                            <input type="number" class="form-control" id="carbs" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fats" class="form-label">Zsírok (g)</label>
+                            <input type="number" class="form-control" id="fats" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mégse</button>
+                    <button type="button" class="btn btn-primary" id="addNutritionButton">Hozzáadás</button>
                 </div>
             </div>
         </div>
+    </div>
 
+    <div class="main-container"> <!-- Added container for centering -->
+        <div class="col-lg-10 col-md-6 col-sm-12">
+            <div class="diary-section">
+                <h1 class="text-center mb-3">Edzésnapló</h1>
+                <section id="workouts" class="mb-5">
+                    <h2>Edzések</h2>
+                    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addWorkoutModal">Hozzáadás</button>
+                    <div class="card">
+                        <div class="card-body">
+                            <table class="table table-striped" id="workoutsTable">
+                                <thead>
+                                    <tr>
+                                        <th>Dátum</th>
+                                        <th>Gyakorlat</th>
+                                        <th>Súly (kg)</th>
+                                        <th>Ismétlések</th>
+                                        <th>Sorozatok</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- User data will be appended here dynamically -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="nutrition" class="mb-5">
+                    <h2>Táplálék</h2>
+                    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addNutritionModal">Hozzáadás</button>
+                    <div class="card">
+                        <div class="card-body">
+                            <table class="table table-striped" id="nutritionTable">
+                                <thead>
+                                    <tr>
+                                        <th>Dátum</th>
+                                        <th>Étel</th>
+                                        <th>Kalóriák</th>
+                                        <th>Proteinek (g)</th>
+                                        <th>Szénhidrátok (g)</th>
+                                        <th>Zsírok (g)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- User data will be appended here dynamically -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
     </div>
 
