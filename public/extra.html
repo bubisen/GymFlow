@@ -19,7 +19,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#registerModal">Regisztráció</a></li>
-                    <li class="nav-item"><a class="nav-link " href="naplo.html">Napló</a></li>
+                    <li class="nav-item"><a class="nav-link" href="naplo.html">Napló</a></li>
                     <li class="nav-item"><a class="nav-link" href="statisztika.html">Statisztika</a></li>
                     <li class="nav-item"><a class="nav-link" href="tervek.html">Tervek</a></li>
                     <li class="nav-item"><a class="nav-link" href="adatok.html">Testmérési Adatok</a></li>
@@ -29,6 +29,7 @@
         </div>
     </nav>
 
+    <!-- Modals for Registration and Sign In -->
     <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -96,39 +97,195 @@
             <div class="col-md-3">
                 <h2>Oldalsó lista</h2>
                 <ul class="list-group">
+                    <li class="list-group-item" onclick="updateContent('Edzés')">Edzés</li>
                     <li class="list-group-item" onclick="updateContent('Táplálkozás')">Táplálkozás</li>
-                    <li class="list-group-item" onclick="updateContent('Ranglista')">Ranglista</li>
-                    <li class="list-group-item" onclick="updateContent('Videók')">Videók</li>
                     <li class="list-group-item" onclick="updateContent('Alvás')">Alvás</li>
                     <li class="list-group-item" onclick="updateContent('Rekordok')">Rekordok</li>
+                    <li class="list-group-item" onclick="updateContent('Ranglista')">Ranglista</li>
+                    <li class="list-group-item" onclick="updateContent('Egyéb')">Egyéb</li>
                 </ul>
             </div>
             <div class="col-md-9">
-                <h2>Példa elemek</h2>
+                <h2 id="contentTitle">Válassz egy elemet</h2>
                 <div id="content">
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title">Példa elem 1</h5>
-                            <p class="card-text">Ez egy példa elem leírása.</p>
-                        </div>
-                    </div>
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title">Példa elem 2</h5>
-                            <p class="card-text">Ez egy másik példa elem leírása.</p>
-                        </div>
-                    </div>
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title">Példa elem 3</h5>
-                            <p class="card-text">Ez egy harmadik példa elem leírása.</p>
-                        </div>
-                    </div>
+                    <p>Válassz egy elemet a bal oldali listából.</p>
                 </div>
             </div>
         </div>
     </div>
+
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function updateContent(item) {
+            const contentElement = document.getElementById('content');
+            const titleElement = document.getElementById('contentTitle');
+
+            switch (item) {
+                case 'Edzés':
+                    titleElement.innerText = 'Edzés';
+                    contentElement.innerHTML = `  
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Edzés tippek</h5>
+                                <p class="card-text">Tudd meg, hogyan érheted el a legjobb edzés eredményeket!</p>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Edzés Video</h5>
+                                <p class="card-text">Nézd meg ezt a videót, hogy jobban megértsd, hogyan eddz hatékonyan!</p>
+                                <iframe width="100%" height="315" src="" title="YouTube video player" frameborder="0" allowfullscreen></iframe> 
+                            </div>
+                        </div>
+                    `;
+                    break;
+                case 'Táplálkozás':
+                    titleElement.innerText = 'Táplálkozás';
+                    contentElement.innerHTML = `  
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Táplálkozási tippek</h5>
+                                <p class="card-text">Ismerd meg a legjobb étkezési szokásokat, amelyek segítenek a fejlődésben!</p>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Táplálkozás Video</h5>
+                                <p class="card-text">Nézd meg ezt a videót, hogy tudd, mi a legjobb táplálkozás az edzéshez!</p>
+                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/abc123xyz" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    `;
+                    break;
+                case 'Alvás':
+                    titleElement.innerText = 'Alvás';
+                    contentElement.innerHTML = `  
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Alvás fontossága</h5>
+                                <p class="card-text">Az alvás elengedhetetlen a regenerálódáshoz és a fejlődéshez. Tudd meg, miért fontos!</p>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Alvás Video</h5>
+                                <p class="card-text">Nézd meg ezt a videót, hogy tudd, hogyan támogathatja az alvás a fejlődésedet!</p>
+                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/xyz123abc" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    `;
+                    break;
+                case 'Rekordok':
+                    titleElement.innerText = 'Rekordok';
+                    contentElement.innerHTML = `  
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Edzés Rekordok</h5>
+                                <p class="card-text">A legjobb edzési eredményeid, amelyekre büszke lehetsz!</p>
+                            </div>
+                        </div>
+                    `;
+                    break;
+                case 'Ranglista':
+                    titleElement.innerText = 'Ranglista';
+                    contentElement.innerHTML = `  
+                    <div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title">Válaszd ki a ranglistát</h5>
+        <select id="leaderboardSelector" class="form-select" onchange="updateLeaderboard()">
+            <option value="" selected disabled>Válassz egy edzést</option>
+            <option value="benchPress">Bench Press</option>
+            <option value="squats">Squats</option>
+            <option value="deadlift">Deadlift</option>
+        </select>
+    </div>
+</div>
+
+                        <div id="leaderboardContent" class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Ranglista</h5>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" style="width: 10%;">Pozíció</th>
+                                            <th scope="col" style="width: 50%;">Név</th>
+                                            <th scope="col" style="width: 40%;">Eredmény</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="leaderboardTableBody">
+                                        <!-- Leaderboard entries will be populated here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    `;
+                    break;
+                case 'Egyéb':
+                    titleElement.innerText = 'Egyéb';
+                    contentElement.innerHTML = `  
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Egyéb Tippek</h5>
+                                <p class="card-text">Hasznos egyéb információk és tippek a fejlődéshez.</p>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Egyéb Video</h5>
+                                <p class="card-text">Nézd meg ezt a videót, hogy további hasznos tippeket kapj!</p>
+                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/ghi789jkl" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    `;
+                    break;
+                default:
+                    contentElement.innerHTML = `<p>Válassz egy elemet a bal oldali listából.</p>`;
+                    break;
+            }
+        }
+
+        const leaderboards = {
+            benchPress: [
+                { position: 1, name: 'John Doe', result: '150 kg' },
+                { position: 2, name: 'Jane Smith', result: '145 kg' },
+                { position: 3, name: 'Alex Johnson', result: '140 kg' }
+            ],
+            squats: [
+                { position: 1, name: 'Michael Brown', result: '200 kg' },
+                { position: 2, name: 'Sarah White', result: '190 kg' },
+                { position: 3, name: 'David Black', result: '180 kg' }
+            ],
+            deadlift: [
+                { position: 1, name: 'Chris Green', result: '250 kg' },
+                { position: 2, name: 'Anna Blue', result: '240 kg' },
+                { position: 3, name: 'Paul Yellow', result: '230 kg' }
+            ]
+        };
+
+        // Function to update the leaderboard based on the selected category
+        function updateLeaderboard() {
+            const selectedCategory = document.getElementById('leaderboardSelector').value;
+            const leaderboardData = leaderboards[selectedCategory];
+            const leaderboardTableBody = document.getElementById('leaderboardTableBody');
+
+            // Clear current leaderboard
+            leaderboardTableBody.innerHTML = '';
+
+            // Populate the leaderboard with the new data
+            leaderboardData.forEach(entry => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${entry.position}</td>
+                    <td>${entry.name}</td>
+                    <td>${entry.result}</td>
+                `;
+                leaderboardTableBody.appendChild(row);
+            });
+        }
+
+        // Call the function to load the default leaderboard (Bench Press)
+        updateLeaderboard();
+    </script>
 </body>
 </html>
